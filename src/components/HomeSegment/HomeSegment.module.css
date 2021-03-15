@@ -1,0 +1,69 @@
+
+.homeContainer {
+    margin: 9vh 0 0 1.25rem;
+    background-color: #ffe8dc;
+  }
+  
+  .imageContainer {
+    width: fit-content;
+    margin: 0 1.25rem;
+    position: relative;
+  }
+  
+  .image {
+    height: 27rem;
+    width: 18rem;
+  }
+  
+  .name {
+    width: 40vw;
+    font-size: 2.5rem;
+    margin-left: -1rem;
+    padding: 2rem 0;
+  }
+  
+  .imageText {
+    padding: 0.4rem 0;
+    margin-bottom: 3rem;
+    font-weight: 600;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .container {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+    .homeContainer {
+      margin-top: 11vh;
+      width: calc(100% - (100% - 1024px)/2);
+    }
+    .imageContainer {
+      display: flex;
+      align-items: flex-end;
+      margin: 0 0 0 5rem;
+      padding-bottom: 5rem;
+    }
+    .image {
+      height: 40rem;
+      width: 26rem;
+    }
+    .name {
+      width: fit-content;
+      font-size: 3.5rem;
+      margin-left: -5rem;
+      padding: 4rem 0;
+    }
+    .imageText {
+      padding: 0;
+      margin: 0;
+      transform: rotate(90deg);
+      font-size: 1.25rem;
+      position: absolute;
+      top: 4.65rem;
+      left: 21.5rem;
+    }
+    .description {
+      margin: 0 5vw 5vw 5vw;
+    }
+  }
