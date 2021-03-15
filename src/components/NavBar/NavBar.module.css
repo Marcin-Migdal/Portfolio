@@ -1,0 +1,98 @@
+.navBarContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navBarSectionText {
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.navBarSectionText:hover {
+  color: #000000;
+}
+
+@media only screen and (max-width: 599px) {
+  .navBarContainer {
+    align-items: center;
+  }
+  .navIcon {
+    background: none;
+    border: none;
+    outline: none;
+    position: fixed;
+    top: 0;
+    margin: 0.5rem;
+    z-index: 3;
+  }
+  .line {
+    display: block;
+    border-radius: 50px;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: black;
+  }
+  .OverlayOpen {
+    position: fixed;
+    top: 0;
+    width: 85vw;
+    height: 80vh;
+    background-color: #ffe8dc;
+    opacity: 0.91;
+    transition: 0.4s;
+    z-index: 2;
+  }
+  .OverlayClosed {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 85vw;
+    height: 0;
+    background-color: #ffe8dc;
+    transition: 0.4s;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .OverlayMenu {
+    list-style: none;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    text-align: end;
+  }
+  .navBarSectionText {
+    margin: 1rem;
+  }
+  .list {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .list {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 11vh;
+    list-style: none;
+    position: fixed;
+    top: 0;
+  }
+  .navBarSectionText {
+    margin-right: 4rem;
+  }
+  li:last-of-type {
+    margin-right: 15vw;
+  }
+  .navIcon {
+    display: none;
+  }
+  .Overlay {
+    display: none;
+  }
+  .OverlayClosed {
+    display: none;
+  }
+}
