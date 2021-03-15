@@ -1,10 +1,13 @@
 import './App.css';
+import HomeSegment from './components/HomeSegment/HomeSegment';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      Wszystko działa
-    </div>
+    <>
+      <NavBar />
+      <HomeSegment />
+    </>
   );
 }
 
