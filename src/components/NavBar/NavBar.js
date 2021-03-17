@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import styles from './NavBar.module.css'
 
-export default function NavBar() {
+export default function NavBar({ refArray }) {
   const [toggle, toggleOverlay] = useState(false);
   const [navbar, toggleNavBar] = useState(false);
 
   useEffect(() => {
     handleSrcoll()
-
     window.addEventListener('scroll', handleSrcoll)
     return () => {
       window.removeEventListener('scroll', handleSrcoll)
@@ -26,28 +25,33 @@ export default function NavBar() {
     toggleOverlay(!toggle)
   }
 
+  const scroolTo = (ref) => {
+    toggle && toggleOverlay(false)
+    ref.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+
   const NavBarList = ({ style }) => {
     return (
       <ul className={style}>
         <li>
-          <p className={styles.navBarSectionText}>
+          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[0])}>
             O mnie
-        </p>
+          </p>
         </li>
         <li>
-          <p className={styles.navBarSectionText}>
+          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[1])}>
             Technologie
-        </p>
+          </p>
         </li>
         <li>
-          <p className={styles.navBarSectionText}>
+          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[2])}>
             Projekty
-        </p>
+          </p>
         </li>
         <li>
-          <p className={styles.navBarSectionText}>
+          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[3])}>
             Kontakt
-        </p>
+          </p>
         </li>
       </ul>
     )

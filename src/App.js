@@ -1,16 +1,17 @@
+import React, { useRef } from 'react'
 import './App.css';
 import AboutMe from './components/AboutMe/AboutMe';
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 
-function App() {
+export default function App() {
+  const refArray = useRef([]);
+
   return (
     <>
-      <NavBar />
+      <NavBar refArray={refArray} />
       <Home />
-      <AboutMe />
+      <AboutMe refArray={refArray} />
     </>
   );
 }
-
-export default App;

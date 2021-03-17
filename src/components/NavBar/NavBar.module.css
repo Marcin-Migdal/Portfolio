@@ -76,6 +76,7 @@
     position: fixed;
     top: 0;
     transition: 0.4s;
+    z-index: 2;
   }
   .navBar.active {
     height: 6vh;
