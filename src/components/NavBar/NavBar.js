@@ -30,9 +30,18 @@ export default function NavBar({ refArray }) {
     ref.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
+  const scroolToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const NavBarList = ({ style }) => {
     return (
       <ul className={style}>
+        <li>
+          <p className={styles.navBarSectionText} onClick={scroolToTop}>
+            Strona główna
+          </p>
+        </li>
         <li>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[0])}>
             O mnie

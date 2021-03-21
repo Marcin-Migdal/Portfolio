@@ -4,7 +4,7 @@ import styles from './AboutMe.module.css'
 export default function AboutMe({ refArray }) {
   return (
     <div ref={el => refArray.current[0] = el} className={styles.container}>
-      <p className={styles.title}>O mnie</p>
+      <p className="title">O mnie</p>
       <span className={styles.description}>
         Od lipca 2019 roku odbyłem cztero miesięczny staż w firmie Hcm Deck,<br className={styles.breakLine} />
         gdzie byłem stażystą na stanowisku Junior Java Developer.
@@ -25,11 +25,11 @@ export default function AboutMe({ refArray }) {
         usprawnić moje projekty napędza moją ciekawość.
       </span>
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>
-          <a className={styles.buttonText} href="https://github.com/Marcin-Migdal?tab=repositories">GitHub</a>
+        <button className="button">
+          <a className="buttonText" href="https://github.com/Marcin-Migdal?tab=repositories">GitHub</a>
         </button>
-        <button className={styles.button}>
-          <a className={styles.buttonText} href="https://www.linkedin.com/in/marcin-migdał-1320881b3">Linkedin</a>
+        <button className="button">
+          <a className="buttonText" href="https://www.linkedin.com/in/marcin-migdał-1320881b3">Linkedin</a>
         </button>
       </div>
     </div>

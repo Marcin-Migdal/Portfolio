@@ -9,3 +9,61 @@
 body {
   overflow-x: hidden;
 }
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 2.25rem;
+}
+
+.button {
+  display: block;
+  outline: none;
+  padding: 0.35rem;
+  font-size: 1rem;
+  color: #b3b3b3;
+  border: solid 2px #ffcdb3;
+  border-radius: 10px;
+  background-color: #ffe8dc;
+  transition: 1s;
+}
+
+.button:active {
+  color: #ffffff;
+  border: solid 2px #ffffff;
+  background-color: #ffd5c0;
+  transition: 0.2s;
+}
+
+.buttonText {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media only screen and (min-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
+  .button {
+    min-Width: 6rem;
+    padding: 0.45rem;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+  }
+  .button:nth-of-type(1) {
+    margin-left: 0;
+  }
+  .button:last-of-type {
+    margin-right: 0;
+  }
+  .button:hover {
+    color: #ffffff;
+    border: solid 2px #ffffff;
+    background-color: #ffd5c0;
+    transition: 0.6s;
+  }
+  .button:active {
+    background-color: #ffbb99;
+    transition: 0.3s;
+  }
+}
