@@ -1,66 +1,21 @@
 .container {
   width: 100%;
   margin-bottom: 18vh;
-  background-color: #ffe8dc;
-  padding-top: 2rem;
 }
 
 .skillsContainer {
-  margin-top: 1.5rem;
-}
-
-.skillBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  height: 90vh;
-}
-
-.skillBox:nth-of-type(odd) {
-  background-color: #ffd4c2;
-}
-
-.skillName {
-  font-size: 1.75rem;
-  margin: 1.25rem 0;
-}
-
-.skillDescription {
-  display: inline-block;
-  width: 90%;
-  font-size: 1.125rem;
-}
-
-.icon {
-  width: 10rem;
-  height: 10rem;
-  background-color: black;
-  border-radius: 50px;
+  background-color: #ffe8dc;
 }
 
 @media only screen and (min-width: 600px) {
   .container {
-    margin-bottom: 22vh;
+    margin-bottom: 16vh;
+    padding-top: 6vh;
   }
   .skillsContainer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     border-top: solid 2px #ffffff;
-  }
-  .skillBox {
-    height: 65vh;
-    width: 50%;
-  }
-  .skillBox:nth-of-type(odd) {
-    background-color: #ffe8dc;
-  }
-  .skillBox:nth-of-type(1), .skillBox:nth-of-type(4), .skillBox:nth-of-type(5), .skillBox:nth-of-type(8) {
-    background-color: #ffd4c2;
-  }
-  .skillDescription {
-    width: 75%;
   }
 }

@@ -25,12 +25,13 @@ export default function NavBar({ refArray }) {
     toggleOverlay(!toggle)
   }
 
-  const scroolTo = (ref) => {
+  const scroolTo = (ref, block) => {
     toggle && toggleOverlay(false)
-    ref.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    ref.scrollIntoView({ behavior: 'smooth', block: block })
   }
 
   const scroolToTop = () => {
+    toggle && toggleOverlay(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -43,22 +44,22 @@ export default function NavBar({ refArray }) {
           </p>
         </li>
         <li>
-          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[0])}>
+          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[0], 'center')}>
             O mnie
           </p>
         </li>
         <li>
-          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[1])}>
+          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[1], 'start')}>
             Technologie
           </p>
         </li>
         <li>
-          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[2])}>
+          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[2], 'start')}>
             Projekty
           </p>
         </li>
         <li>
-          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[3])}>
+          <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[3], 'start')}>
             Kontakt
           </p>
         </li>

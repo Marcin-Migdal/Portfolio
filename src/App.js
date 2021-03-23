@@ -13,7 +13,7 @@ export default function App() {
       <NavBar refArray={refArray} />
       <Home />
       <AboutMe refArray={refArray} />
-      <Technologies refArray={refArray}/>
+      <Technologies refArray={refArray} />
     </>
   );
 }

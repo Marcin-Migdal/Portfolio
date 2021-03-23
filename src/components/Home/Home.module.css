@@ -36,19 +36,19 @@
 
 @media only screen and (min-width: 600px) {
   .container {
-    margin: 11vh 0 22vh 0;
-    margin-left: calc((100% - 1024px)/2);
-    width: calc(100% - (100% - 1024px)/2);
+    margin: 5.25rem 0 22vh 0;
+    margin-left: calc((100% - 65%) / 2);
+    width: calc(100% - (100% - 65%) / 2);
   }
   .contentContainer {
     display: flex;
     align-items: flex-end;
-    margin-left: 5rem;
+    margin-left: 5vw;
     padding-bottom: 5rem;
   }
   .image {
-    height: 40rem;
-    width: 26rem;
+    height: 50vw;
+    width: 31vw;
   }
   .name {
     width: fit-content;
@@ -59,17 +59,42 @@
   .imageText {
     padding: 0;
     margin: 0;
-    transform: rotate(90deg);
-    font-size: 1.25rem;
+    font-size: 1.75vw;
     position: absolute;
-    top: 5rem;
-    left: 21.5rem;
+    top: 50vw;
+    left: 0.25rem;
+  }
+  .subContentContainer {
+    margin: 1.5vw;
+  }
+  .description {
+    width: 35vw;
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .container {
+    margin-left: calc((100% - 1024px) / 2);
+    width: calc(100% - (100% - 1024px) / 2);
+  }
+  .image {
+    height: 40rem;
+    width: 26rem;
   }
   .subContentContainer {
     margin: 0 0 2rem 3rem;
   }
   .description {
     width: 35rem;
-    font-size: 1.3rem;
+  }
+  .imageText {
+    padding: 0;
+    margin: 0;
+    transform: rotate(90deg);
+    font-size: 1.25rem;
+    position: absolute;
+    top: 5rem;
+    left: 21.5rem;
   }
 }

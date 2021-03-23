@@ -40,6 +40,13 @@ body {
   color: inherit;
 }
 
+.titleContainer {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  background-color: #ffe8dc;
+}
+
 @media only screen and (min-width: 600px) {
   .title {
     font-size: 3rem;
@@ -65,5 +72,9 @@ body {
   .button:active {
     background-color: #ffbb99;
     transition: 0.3s;
+  }
+  
+  .titleContainer {
+    height: 8rem;
   }
 }

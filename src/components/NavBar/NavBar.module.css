@@ -42,7 +42,7 @@
     right: 0;
     width: 85vw;
     background-color: #ffe8dc;
-    opacity: 0.91;
+    opacity: 0.95;
     transition: 0.4s;
     z-index: 2;
     overflow: hidden;
@@ -71,7 +71,7 @@
 @media only screen and (min-width: 600px) {
   .navBar {
     display: block;
-    height: 11vh;
+    height: 5.25rem;
     border-bottom: solid 2px #ffffff;
     position: fixed;
     top: 0;
@@ -79,7 +79,7 @@
     z-index: 2;
   }
   .navBar.active {
-    height: 6vh;
+    height: 3rem;
     background-color: #ffdecc;
   }
   .list {
@@ -91,7 +91,7 @@
     list-style: none;
   }
   .navBarSectionText {
-    margin-right: 4rem;
+    margin-right: 3.5vw;
   }
   li:last-of-type {
     margin-right: 15vw;

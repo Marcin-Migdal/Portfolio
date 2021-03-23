@@ -1,7 +1,7 @@
 import React from 'react'
-import image from '../../images/portfolio.jpg'
+import image from '../../resourse/images/portfolioImage.jpg'
 import styles from './Home.module.css'
-import cv from '../../CvFile/cv.pdf'
+import cv from '../../resourse/cv.pdf'
 
 export default function Home() {
   return (
