@@ -50,12 +50,12 @@ export default function NavBar({ refArray }) {
         </li>
         <li>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[1], 'start')}>
-            Technologie
+            Projekty
           </p>
         </li>
         <li>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[2], 'start')}>
-            Projekty
+            Technologie
           </p>
         </li>
         <li>
@@ -73,9 +73,9 @@ export default function NavBar({ refArray }) {
         <NavBarList style={styles.list} />
       </div>
       <button className={styles.navIcon} onClick={handleClick}>
-        <span className={toggle ? `${styles.line} ${styles.open}` : `${styles.line} ${styles.closed}`} />
-        <span className={toggle ? `${styles.line} ${styles.open}` : `${styles.line} ${styles.closed}`} />
-        <span className={toggle ? `${styles.line} ${styles.open}` : `${styles.line} ${styles.closed}`} />
+        <span className={toggle ? `${styles.line} ${styles.open}` : styles.line} />
+        <span className={toggle ? `${styles.line} ${styles.open}` : styles.line} />
+        <span className={toggle ? `${styles.line} ${styles.open}` : styles.line} />
       </button>
       <div className={toggle ? `${styles.overlay} ${styles.open}` : `${styles.overlay} ${styles.closed}`}>
         <NavBarList style={styles.overlayMenu} />

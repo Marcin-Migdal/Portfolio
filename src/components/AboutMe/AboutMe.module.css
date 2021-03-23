@@ -1,16 +1,12 @@
 .container {
-  width: calc(100% - 1.25rem);
   margin-bottom: 18vh;
-  padding-top: 2.5rem;
-}
-
-.backgroundColor {
-  padding: 0 1.25rem;
   padding-bottom: 2rem;
+  width: calc(100% - 1.25rem);
   background-color: #ffe8dc;
 }
 
 .description {
+  margin: 0 1.25rem;
   display: inline-block;
   font-size: 1rem;
 }
@@ -24,15 +20,12 @@
 
 @media only screen and (min-width: 600px) {
   .container {
-    padding-top: 6vh;
     margin-bottom: 16vh;
+    padding-bottom: 3rem;
     width: calc(100% - (100% - 65%) / 2);
   }
-  .backgroundColor {
-    padding: 0 6vw;
-    padding-bottom: 3rem;
-  }
   .description {
+    margin: 0 6vw;
     font-size: 1.3rem;
   }
   .buttonContainer {

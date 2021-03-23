@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
   overflow-x: hidden;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  background-color: #ffe8dc;
 }
 
 .title {
@@ -40,19 +47,18 @@ body {
   color: inherit;
 }
 
-.titleContainer {
-  display: flex;
-  align-items: center;
-  height: 8rem;
-  background-color: #ffe8dc;
-}
-
 @media only screen and (min-width: 600px) {
+  .sectionContainer {
+    padding-top: 6vh;
+  }
+  .titleContainer {
+    height: 8rem;
+  }
   .title {
     font-size: 3rem;
   }
   .button {
-    min-Width: 6rem;
+    min-width: 6rem;
     padding: 0.45rem;
     font-size: 1.1rem;
     margin: 0 1rem;
@@ -72,9 +78,5 @@ body {
   .button:active {
     background-color: #ffbb99;
     transition: 0.3s;
-  }
-  
-  .titleContainer {
-    height: 8rem;
   }
 }

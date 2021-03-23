@@ -25,11 +25,6 @@
     height: 3px;
     margin: 5px;
     transition: 0.4s;
-  }
-  .line.closed {
-    background-color: #000000;
-  }
-  .line.open {
     background-color: #b3b3b3;
   }
   .line.open:nth-of-type(2) {

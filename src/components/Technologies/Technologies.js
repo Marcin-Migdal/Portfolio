@@ -11,9 +11,9 @@ import reactIcon from '../../resourse/images/react.png'
 import scrumIcon from '../../resourse/images/scrum.png'
 import SkillBox from '../SkillBox/SkillBox'
 
-export default function Technologies({ refArray }) {
+export default function Technologies() {
   return (
-    <div ref={el => refArray.current[1] = el} className={styles.container}>
+    <div className={styles.container}>
       <div className="titleContainer">
         <p className="title">Umiejętności i Technologie</p>
       </div>
