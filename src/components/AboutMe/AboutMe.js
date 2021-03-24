@@ -30,12 +30,8 @@ export default function AboutMe() {
           usprawnić moje projekty napędza moją ciekawość.
         </span>
       <div className={styles.buttonContainer}>
-        <button className="button">
-          <a className="buttonText" href="https://github.com/Marcin-Migdal?tab=repositories">GitHub</a>
-        </button>
-        <button className="button">
-          <a className="buttonText" href="https://www.linkedin.com/in/marcin-migdał-1320881b3">Linkedin</a>
-        </button>
+        <a className="button" href="https://github.com/Marcin-Migdal?tab=repositories">GitHub</a>
+        <a className="button" href="https://www.linkedin.com/in/marcin-migdał-1320881b3">Linkedin</a>
       </div>
     </div>
   )

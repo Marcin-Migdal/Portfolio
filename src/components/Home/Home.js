@@ -14,11 +14,7 @@ export default function Home() {
           <p className={styles.description}>
             Nazywam się Marcin Migdał i jestem absolwentem Państwowej Wyższej Szkoły Zawodowej w Tarnowie.
           </p>
-          <button className="button">
-            <a className="buttonText" href={cv} download>
-              Pobierz CV
-            </a>
-          </button>
+          <a className="button" href={cv} download> Pobierz CV </a>
         </div>
       </div>
     </div>

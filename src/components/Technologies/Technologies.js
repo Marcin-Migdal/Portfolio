@@ -1,14 +1,14 @@
 import React from 'react'
 import styles from './Technologies.module.css'
 
-import html5Icon from '../../resourse/images/html5.png'
-import css3Icon from '../../resourse/images/css3.png'
-import datebaseIcon from '../../resourse/images/database.png'
-import gitIcon from '../../resourse/images/git.png'
-import javaIcon from '../../resourse/images/java.png'
-import javaScriptIcon from '../../resourse/images/javaScript.png'
-import reactIcon from '../../resourse/images/react.png'
-import scrumIcon from '../../resourse/images/scrum.png'
+import html5Icon from '../../resourse/images/skills/html5.png'
+import css3Icon from '../../resourse/images/skills/css3.png'
+import datebaseIcon from '../../resourse/images/skills/database.png'
+import gitIcon from '../../resourse/images/skills/git.png'
+import javaIcon from '../../resourse/images/skills/java.png'
+import javaScriptIcon from '../../resourse/images/skills/javaScript.png'
+import reactIcon from '../../resourse/images/skills/react.png'
+import scrumIcon from '../../resourse/images/skills/scrum.png'
 import SkillBox from '../SkillBox/SkillBox'
 
 export default function Technologies() {

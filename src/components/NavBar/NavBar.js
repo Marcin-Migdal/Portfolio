@@ -38,27 +38,27 @@ export default function NavBar({ refArray }) {
   const NavBarList = ({ style }) => {
     return (
       <ul className={style}>
-        <li>
+        <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={scroolToTop}>
             Strona główna
           </p>
         </li>
-        <li>
+        <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[0], 'center')}>
             O mnie
           </p>
         </li>
-        <li>
+        <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[1], 'start')}>
             Projekty
           </p>
         </li>
-        <li>
+        <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[2], 'start')}>
             Technologie
           </p>
         </li>
-        <li>
+        <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[3], 'start')}>
             Kontakt
           </p>

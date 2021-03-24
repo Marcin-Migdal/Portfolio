@@ -88,7 +88,7 @@
   .navBarSectionText {
     margin-right: 3.5vw;
   }
-  li:last-of-type {
+  .listElement:last-of-type {
     margin-right: 15vw;
   }
   .navIcon {
