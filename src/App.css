@@ -42,7 +42,6 @@ body {
 
 .subTitle {
   font-size: 2rem;
-  margin: 2.5vh 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -76,9 +75,6 @@ body {
   .button:active {
     background-color: #ffbb99;
     transition: 0.3s;
-  }
-  .buttonText {
-    padding: 0.7rem;
   }
   .subTitle {
     font-size: 2.25rem;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './Projects.module.css'
-import editRoomImage from '../../resourse/images/projects/munchtrack/desktop/editRoom.png'
+import welcomeImage from '../../resourse/images/projects/munchtrack/desktop/welcomePage.png'
 import extendedGameImage from '../../resourse/images/projects/munchtrack/desktop/extendedGame.png'
 import gameImage from '../../resourse/images/projects/munchtrack/desktop/game.png'
 import roomImage from '../../resourse/images/projects/munchtrack/desktop/room.png'
@@ -9,9 +9,40 @@ import searchBarImage from '../../resourse/images/projects/munchtrack/desktop/se
 import searchResultImage from '../../resourse/images/projects/munchtrack/desktop/searchResult.png'
 import settingsImage from '../../resourse/images/projects/munchtrack/desktop/settings.png'
 
+import welcomeImageMobile from '../../resourse/images/projects/munchtrack/mobile/welcomePage.png'
+import extendedGameImageMobile from '../../resourse/images/projects/munchtrack/mobile/extendedGame.png'
+import gameImageMobile from '../../resourse/images/projects/munchtrack/mobile/game.png'
+import roomImageMobile from '../../resourse/images/projects/munchtrack/mobile/room.png'
+import roomsImageMobile from '../../resourse/images/projects/munchtrack/mobile/rooms.png'
+import searchBarImageMobile from '../../resourse/images/projects/munchtrack/mobile/searchBar.png'
+import searchResultImageMobile from '../../resourse/images/projects/munchtrack/mobile/searchResult.png'
+import settingsImageMobile from '../../resourse/images/projects/munchtrack/mobile/settings.png'
+
 export default function Projects() {
   const [imageIndex, setImageIndex] = useState(0);
-  const projectImageArray = [editRoomImage, extendedGameImage, gameImage, roomImage, roomsImage, searchBarImage, searchResultImage, settingsImage]
+  const [mobileImage, setMobileImage] = useState(false);
+
+  const projectImageArray = mobileImage ?
+    [
+      welcomeImageMobile,
+      roomsImageMobile,
+      searchBarImageMobile,
+      searchResultImageMobile,
+      roomImageMobile,
+      settingsImageMobile,
+      gameImageMobile,
+      extendedGameImageMobile
+    ] :
+    [
+      welcomeImage,
+      roomsImage,
+      searchBarImage,
+      searchResultImage,
+      roomImage,
+      settingsImage,
+      gameImage,
+      extendedGameImage
+    ]
 
   const prevImage = () => {
     if (imageIndex - 1 >= 0) {
@@ -25,6 +56,10 @@ export default function Projects() {
     }
   }
 
+  const setImageType = (imageType) => {
+    setMobileImage(imageType)
+  }
+
   return (
     <div className={styles.container}>
       <div className="titleContainer">
@@ -32,12 +67,24 @@ export default function Projects() {
       </div>
       <p className="subTitle">Munchtrack</p>
       <div className={styles.projectContainer}>
+        <div className={styles.switchButtonsContainer}>
+          <button
+            className={!mobileImage ? `${styles.switchButton} ${styles.switchButtonActive}` : styles.switchButton}
+            onClick={() => setImageType(false)}>
+            Desktop
+          </button >
+          <button
+            className={mobileImage ? `${styles.switchButton} ${styles.switchButtonActive}` : styles.switchButton}
+            onClick={() => setImageType(true)}>
+            Mobile
+          </button>
+        </div>
         <div className={styles.imageContainer}>
           <button className={styles.imageButton} onClick={prevImage}>
             {'<'}
           </button>
           <div className={styles.upperRightHighlight} />
-          <img className={styles.image} src={projectImageArray[imageIndex]} />
+          <img className={mobileImage ? styles.mobileImage : styles.image} src={projectImageArray[imageIndex]} />
           <div className={styles.lowerLeftHighlight} />
           <button className={styles.imageButton} onClick={nextImage}>
             {'>'}
@@ -47,8 +94,8 @@ export default function Projects() {
           <p className={styles.title}>Opis</p>
           <span className={styles.projectDescription}>
             Serwis Munchtrack został stworzony z myślą aby umożliwić łatwiejsze śledzenie rozgrywki w grze karcianej munchkin,
-            serwis umożliwia założenie konta użytkownika, stworzenie pokoi do których mogą dołączać gracze,
-            po dołączeniu do pokoju gracze mogą zapisywać postęp swojej postaci oraz obserwować postacie swoich przeciwników.
+            serwis umożliwia założenie konta użytkownika oraz stworzenie pokoi do których mogą dołączać inni użytkownicy,
+            po dołączeniu do pokoju mogą oni zapisywać postęp swojej postaci oraz obserwować postacie swoich przeciwników.
           </span>
           <hr className={styles.shortHorizontalHr} />
           <p className={styles.title}>Technologie i biblioteki</p>

@@ -12,12 +12,52 @@
   padding-bottom: 2rem;
 }
 
+.projectContainer {
+  margin-top: 0.5rem;
+}
+
+.switchButtonsContainer {
+  margin-bottom: -1rem;
+}
+
+.switchButton {
+  padding: 0.3rem 0;
+  border: solid 2px #ffcdb3;
+  outline: none;
+  transition: 1s;
+  color: #b3b3b3;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+}
+
+.switchButton:active {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #ffd5c0;
+  transition: 0.2s;
+}
+
+.switchButton:first-of-type {
+  border-radius: 10px 0 0 10px;
+  border-right-width: 1px;
+}
+
+.switchButton:last-of-type {
+  border-radius: 0 10px 10px 0;
+  border-left-width: 1px;
+}
+
+.switchButtonActive {
+  background-color: #ffd5c0;
+}
+
 .descriptionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin: 1rem 0 2rem 0;
+  margin: 0.5rem 0 2rem 0;
 }
 
 .projectDescription,
@@ -78,6 +118,7 @@
   border-radius: 100%;
   font-size: 1.5rem;
   opacity: 0.3;
+  transition: 0.3s;
 }
 
 .imageButton:active {
@@ -99,7 +140,6 @@
   border: #fff solid;
   width: 3rem;
   height: 3rem;
-  border-radius: 12px;
 }
 
 .upperRightHighlight {
@@ -117,7 +157,7 @@
 .image {
   width: 79vw;
   height: 46vw;
-  border-radius: 12px;
+  border-radius: 12px 0 12px 0;
 }
 
 .shortHorizontalHr,
@@ -139,6 +179,23 @@
     margin-bottom: 16vh;
     margin-left: calc((100% - 65%) / 2);
     width: calc(100% - (100% - 65%) / 2);
+  }
+
+  .switchButton {
+    min-width: 4.75rem;
+    font-size: 1rem;
+  }
+
+  .switchButton:hover {
+    color: #ffffff;
+    border: solid 2px #ffffff;
+    background-color: #ffd5c0;
+    transition: 0.6s;
+  }
+
+  .switchButton:active {
+    background-color: #ffbb99;
+    transition: 0.3s;
   }
 
   .descriptionContainer {
@@ -179,16 +236,15 @@
   }
 
   .image {
-    width: 53vw;
+    width: 56vw;
     height: 31vw;
-    border-radius: 16px;
+    border-radius: 16px 0 16px 0;
   }
 
   .upperRightHighlight,
   .lowerLeftHighlight {
     width: 5rem;
     height: 5rem;
-    border-radius: 16px;
   }
 
   .upperRightHighlight {
