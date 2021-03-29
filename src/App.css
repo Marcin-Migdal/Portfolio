@@ -40,10 +40,6 @@ body {
   transition: 0.2s;
 }
 
-.subTitle {
-  font-size: 2rem;
-}
-
 @media only screen and (min-width: 600px) {
   .sectionContainer {
     padding-top: 6vh;
@@ -75,8 +71,5 @@ body {
   .button:active {
     background-color: #ffbb99;
     transition: 0.3s;
-  }
-  .subTitle {
-    font-size: 2.25rem;
   }
 }
