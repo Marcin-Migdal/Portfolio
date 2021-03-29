@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.bd508a1d.chunk.css",
-    "main.js": "/Portfolio/static/js/main.4ebac1a1.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.4ebac1a1.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.d97e1f3c.chunk.css",
+    "main.js": "/Portfolio/static/js/main.763b545a.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.763b545a.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.eb6781d5.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.eb6781d5.js.map",
     "static/js/2.5e52ec87.chunk.js": "/Portfolio/static/js/2.5e52ec87.chunk.js",
     "static/js/2.5e52ec87.chunk.js.map": "/Portfolio/static/js/2.5e52ec87.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.bd508a1d.chunk.css.map": "/Portfolio/static/css/main.bd508a1d.chunk.css.map",
+    "static/css/main.d97e1f3c.chunk.css.map": "/Portfolio/static/css/main.d97e1f3c.chunk.css.map",
     "static/js/2.5e52ec87.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.5e52ec87.chunk.js.LICENSE.txt",
     "static/media/copyClipboardIcon.e275c66b.jpg": "/Portfolio/static/media/copyClipboardIcon.e275c66b.jpg",
     "static/media/css3.e8f849a8.png": "/Portfolio/static/media/css3.e8f849a8.png",
@@ -41,7 +41,7 @@
   "entrypoints": [
     "static/js/runtime-main.eb6781d5.js",
     "static/js/2.5e52ec87.chunk.js",
-    "static/css/main.bd508a1d.chunk.css",
-    "static/js/main.4ebac1a1.chunk.js"
+    "static/css/main.d97e1f3c.chunk.css",
+    "static/js/main.763b545a.chunk.js"
   ]
 }
