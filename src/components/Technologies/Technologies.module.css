@@ -1,16 +1,12 @@
 .container {
   width: 100%;
-  margin-bottom: 18vh;
 }
 
 .skillsContainer {
   background-color: #ffe8dc;
 }
 
-@media only screen and (min-width: 600px) {
-  .container {
-    margin-bottom: 16vh;
-  }
+@media only screen and (min-width: 600px) { 
   .skillsContainer {
     display: flex;
     flex-wrap: wrap;

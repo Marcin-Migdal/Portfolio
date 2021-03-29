@@ -1,5 +1,4 @@
 .container {
-  margin-bottom: 18vh;
   padding-bottom: 2rem;
   width: calc(100% - 1.25rem);
   background-color: #ffe8dc;
@@ -12,8 +11,7 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .container {
-    margin-bottom: 16vh;
+  .container { 
     padding-bottom: 3.5rem;
     width: calc(100% - (100% - 65%) / 2);
   }

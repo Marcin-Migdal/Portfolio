@@ -13,7 +13,9 @@ export default function App() {
   return (
     <>
       <NavBar refArray={refArray} />
-      <Home />
+      <div className="sectionContainer" >
+        <Home />
+      </div>
       <div className="sectionContainer" ref={el => refArray.current[0] = el}>
         <AboutMe />
       </div>
