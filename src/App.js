@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import './App.css';
 import AboutMe from './components/AboutMe/AboutMe';
+import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Projects from './components/Projects/Projects';
@@ -22,6 +23,11 @@ export default function App() {
       <div className="sectionContainer" ref={el => refArray.current[2] = el}>
         <Technologies />
       </div>
+      <div className="sectionContainer" ref={el => refArray.current[3] = el}>
+        <Contact />
+      </div>
+
+      <p className="footer">Copyright © Marcin Migdał 2021</p>
     </>
   );
 }

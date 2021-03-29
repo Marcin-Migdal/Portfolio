@@ -99,35 +99,21 @@
 }
 
 .upperRightHighlight,
-.lowerLeftHighlight {
-  position: absolute;
-  border: #fff solid;
-  width: 3rem;
-  height: 3rem;
-}
-
-.upperRightHighlight {
-  top: -1rem;
-  right: -1rem;
-  border-width: 3px 3px 0 0;
-}
-
-.lowerLeftHighlight {
-  bottom: -1rem;
-  left: -1rem;
-  border-width: 0 0 3px 3px;
+.lowerLeftHighlight,
+.lowerRightHighlight {
+  display: none;
 }
 
 .image {
   width: 79vw;
   height: 46vw;
-  border-radius: 12px 0 12px 0;
+  border-radius: 12px;
 }
 
 .mobileImage {
   width: 25vh;
   height: 50vh;
-  border-radius: 16px 0 16px 0;
+  border-radius: 12px;
 }
 
 .bottomDescriptionContainer,
@@ -146,7 +132,7 @@
   background-color: #ffe8dc;
 }
 
-.projectSectionTitleShort{
+.projectSectionTitleShort {
   width: 45%;
 }
 
@@ -168,7 +154,7 @@
 }
 
 .horizontalHr {
-  margin: 3rem 0;
+  margin: 1.5rem 0 3rem 0;
 }
 
 .verticalHr {
@@ -182,7 +168,7 @@
   flex-direction: row;
   width: 90%;
   height: 10rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 .techStackList {
@@ -251,28 +237,41 @@
   .mobileImage {
     width: 17vw;
     height: 35vw;
-    border-radius: 16px 0 16px 0;
+    border-radius: 16px 0 0 16px;
   }
 
   .upperRightHighlight,
-  .lowerLeftHighlight {
-    width: 5rem;
-    height: 5rem;
+  .lowerLeftHighlight,
+  .lowerRightHighlight {
+    display: block;
+    position: absolute;
+    border: #ffffff solid;
+    min-width: 3rem;
+    width: 5vw;
+    min-height: 3rem;
+    height: 5vw;
   }
 
   .upperRightHighlight {
-    top: -2vw;
-    right: -2vw;
-    border-width: 0.2rem 0.2rem 0 0;
+    top: -1.5vw;
+    right: -1.5vw;
+    border-width: 3px 3px 0 0;
   }
 
   .lowerLeftHighlight {
-    bottom: -2vw;
-    left: -2vw;
-    border-width: 0 0 0.2rem 0.2rem;
+    bottom: -1.5vw;
+    left: -1.5vw;
+    border-width: 0 0 3px 3px;
   }
 
-  .projectSectionTitleShort{
+  .lowerRightHighlight {
+    bottom: -1.5vw;
+    right: -1.5vw;
+    left: auto;
+    border-width: 0 3px 3px 0;
+  }
+
+  .projectSectionTitleShort {
     width: fit-content;
   }
 

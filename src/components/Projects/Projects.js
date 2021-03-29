@@ -86,7 +86,7 @@ export default function Projects() {
             </button>
             <div className={styles.upperRightHighlight} />
             <img className={mobileImage ? styles.mobileImage : styles.image} src={projectImageArray[imageIndex]} />
-            <div className={styles.lowerLeftHighlight} />
+            <div className={mobileImage ? styles.lowerRightHighlight : styles.lowerLeftHighlight} />
             <button className={styles.imageButton} onClick={nextImage}>
               {'>'}
             </button>
@@ -119,6 +119,9 @@ export default function Projects() {
               React-Redux
             </li>
             <li className={styles.listText}>
+              React-Router
+            </li>
+            <li className={styles.listText}>
               Material-Ui
             </li>
             <li className={styles.listText}>
@@ -131,7 +134,6 @@ export default function Projects() {
               React-Perfect-Scrollbar
             </li>
           </ul>
-
           <ul className={styles.techStackList}>
             <p className={styles.projectSectionSubTitle}>Back-End:</p>
             <li className={styles.listText}>
