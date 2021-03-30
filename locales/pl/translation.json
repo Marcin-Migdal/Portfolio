@@ -1,5 +1,48 @@
 {
-  "test":{
-    "title":"To jest test"
+  "navbar": {
+    "home": "Strona główna",
+    "aboutMe": "O mnie",
+    "projects": "Projekty",
+    "technologies": "Technologie",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "shortDescription": "Nazywam się Marcin Migdał i jestem absolwentem Państwowej Wyższej Szkoły Zawodowej w Tarnowie.",
+    "downLoadButton": "Pobierz CV"
+  },
+  "aboutMe": "Od lipca 2019 roku odbyłem cztero miesięczny staż w firmie Hcm Deck, gdzie byłem stażystą na stanowisku Junior Java Developer. Do moich obowiązków należało tworzenie komponentów mikroserwisów w technologi Java Spring jak również tworzenie komponentów front-end w technologi React, to tam po raz pierwszy miałem styczność z tworzeniem prawdziwych aplikaji \nfront-end.\n\n Zdobyłem tytuł Inżyniera w czerwcu 2020 roku na kierunku Informatyka Stosowana, ze specjalizacją w zakresie inżynierii systemów informatycznych. W momencie zakończenia studiów zdecydowałem że chce robić to co sprawia mi największą przyjemność w dziedzinie programowania, czyli tworzenie aplikacji front-end.\n\nWybrałem tworzenie aplikacji front-end ponieważ tworzenie nowych aplikacji oraz usprawnianie tych przy których obecnie pracuje daje mi wiele satysfakcji, a poznawanie nowych technologii oraz funkcjonalości dzięki którym będę mógł usprawnić moje projekty napędza moją ciekawość.",
+  "projects": {
+    "munchtrack": {
+      "name": "Munchtrack",
+      "description": "Serwis Munchtrack został stworzony z myślą aby umożliwić łatwiejsze śledzenie rozgrywki w grze karcianej munchkin,serwis umożliwia założenie konta użytkownika oraz stworzenie pokoi do których mogą dołączać inni użytkownicy,po dołączeniu do pokoju mogą oni zapisywać postęp swojej postaci oraz obserwować postacie swoich przeciwników."
+    },
+    "portfolio": {
+      "name": "Portfolio",
+      "description": ""
+    },
+    "ethoLottery": {
+      "name": "EthoLottery",
+      "description": ""
+    },
+    "titles": {
+      "description": "Opis",
+      "technologies": "Technologie i biblioteki"
+    }
+  },
+  "technologies": {
+    "title": "Umiejętności i Technologie",
+    "skillName": {
+      "dataBase": "Bazy danych"
+    },
+    "skillDescriptions": {
+      "html": "Znajomość struktury dokumentu html, umiejętność posługiwania się tagami semantycznymi i non-semantycznymi",
+      "css": "Umiejętność tworzenia responsywnych stron, płynnych przejść oraz kreatywność podczas tworzenia, dobra znajomość flex-box'u",
+      "javaScript": "Znajomość mechanizmów JavaScript jak i funkcjonalności ES6",
+      "react": "Tworzenie aplikacji React, komunikowanie się z api za pomocą biblioteki Axios, znajomość react-hooks, react-redux, react-router. Stylowania komponentów za pomocą klasycznego css jak i css-in-js. Znajomość zewnętrznych bibliotek takich jak Material-Ui oraz i18next która umożliwia umiędzynarodowienie aplikacji",
+      "scrum": "Kilku miesięczne doświadczenie z pracy w zespole scrumowym gdzie miałem okazje poznać metodyke scrum. Potrafie odnaleźć się w zespole oraz nie boje się poznawać oraz uczyć nowych rzeczy",
+      "git": "Podstawowe umiejętność korzystania z rozproszonego systemu kontroli wersji, kilku miesięczne doświadczenie z pracy przy komercyjnych projektach",
+      "java": "Umiejętność pisania aplikaji za pomocą jezyka Java, tworzenie oprogramowania back-end za pomocą frameworku Spring-Boot, testowanie aplikacji za pomocą środowiska spock",
+      "dataBase": "Znajomość relacyjnych baz danych MySql jak i podstawowa umiejetność obsługiwania narzędzia MySql Workbench"
+    }
   }
 }
