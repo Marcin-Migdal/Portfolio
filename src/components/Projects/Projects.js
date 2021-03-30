@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './Projects.module.css'
+import { useTranslation } from 'react-i18next';
+
 import welcomeImage from '../../resourse/images/projects/munchtrack/desktop/welcomePage.png'
 import extendedGameImage from '../../resourse/images/projects/munchtrack/desktop/extendedGame.png'
 import gameImage from '../../resourse/images/projects/munchtrack/desktop/game.png'
@@ -20,11 +22,11 @@ import settingsImageMobile from '../../resourse/images/projects/munchtrack/mobil
 import ProjectComponent from '../ProjectComponent/ProjectComponent'
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   const munchtrackContentObject = {
-    projectName: 'Munchtrack',
-    description: 'Serwis Munchtrack został stworzony z myślą aby umożliwić łatwiejsze śledzenie rozgrywki w grze karcianej munchkin,' +
-      'serwis umożliwia założenie konta użytkownika oraz stworzenie pokoi do których mogą dołączać inni użytkownicy,' +
-      'po dołączeniu do pokoju mogą oni zapisywać postęp swojej postaci oraz obserwować postacie swoich przeciwników.',
+    projectName: t('projects.munchtrack.name'),
+    description: t('projects.munchtrack.description'),
     images: {
       mobile: [
         welcomeImageMobile,
@@ -55,8 +57,8 @@ export default function Projects() {
   }
 
   const portfolioContentObject = {
-    projectName: 'Portfolio',
-    description: 'Moje portfolio',
+    projectName: t('projects.portfolio.name'),
+    description: t('projects.portfolio.description'),
     images: {
       mobile: [welcomeImageMobile],
       desktop: [welcomeImage]
@@ -69,8 +71,8 @@ export default function Projects() {
   }
 
   const lotteryContentObject = {
-    projectName: 'EthoLottery',
-    description: 'loteria cyca',
+    projectName: t('projects.ethoLottery.name'),
+    description: t('projects.ethoLottery.description'),
     images: {
       mobile: [welcomeImageMobile],
       desktop: [welcomeImage]
@@ -85,7 +87,7 @@ export default function Projects() {
   return (
     <div className={styles.container}>
       <div className="titleContainer">
-        <p className="title">Projekty</p>
+        <p className="title">{t('navbar.projects')}</p>
       </div>
       <ProjectComponent projectContentObject={munchtrackContentObject} />
       <hr className={styles.horizontalHr} />

@@ -1,8 +1,10 @@
 import React, { useRef } from 'react'
 import styles from './Contact.module.css'
 import copyClipboardIcon from '../../resourse/images/copyClipboardIcon.jpg'
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const emailRef = useRef();
 
   const copyTextToClipboard = () => {
@@ -13,7 +15,7 @@ export default function Contact() {
   return (
     <div className={styles.container}>
       <div className="titleContainer">
-        <p className="title">Kontakt</p>
+        <p className="title">{t('navbar.contact')}</p>
       </div>
       <a className={styles.contactButton}
         href="https://github.com/Marcin-Migdal?tab=repositories">
@@ -32,6 +34,7 @@ export default function Contact() {
           value="marcin.migdal1996@gmail.com"
         />
         <img
+          alt="copy"
           onClick={copyTextToClipboard}
           className={styles.copyClipboardIcon}
           src={copyClipboardIcon} />

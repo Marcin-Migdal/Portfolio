@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import styles from './NavBar.module.css'
 
 export default function NavBar({ refArray }) {
+  const { t, i18n } = useTranslation();
   const [toggle, toggleOverlay] = useState(false);
   const [navbar, toggleNavBar] = useState(false);
 
@@ -35,34 +37,50 @@ export default function NavBar({ refArray }) {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+  }
+
   const NavBarList = ({ style }) => {
     return (
       <ul className={style}>
         <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={scroolToTop}>
-            Strona główna
+            {t('navbar.home')}
           </p>
         </li>
         <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[0], 'center')}>
-            O mnie
+            {t('navbar.aboutMe')}
           </p>
         </li>
         <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[1], 'start')}>
-            Projekty
+            {t('navbar.projects')}
           </p>
         </li>
         <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[2], 'start')}>
-            Technologie
+            {t('navbar.technologies')}
           </p>
         </li>
         <li className={styles.listElement}>
           <p className={styles.navBarSectionText} onClick={() => scroolTo(refArray.current[3], 'start')}>
-            Kontakt
+            {t('navbar.contact')}
           </p>
         </li>
+        <div className={styles.buttonContainer}>
+          <button
+            className={styles.lngButton}
+            onClick={() => changeLanguage('en')}>
+            EN
+          </button>/
+          <button
+            className={styles.lngButton}
+            onClick={() => changeLanguage('pl')}>
+            PL
+          </button>
+        </div>
       </ul>
     )
   }

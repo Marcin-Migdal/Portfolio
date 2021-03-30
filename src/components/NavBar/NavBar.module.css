@@ -8,6 +8,14 @@
   color: #000000;
 }
 
+.lngButton {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin: 0.25rem;
+  color: #b3b3b3;
+}
+
 @media only screen and (max-width: 599px) {
   .navIcon {
     background: none;
@@ -31,7 +39,6 @@
     width: 17px;
   }
   .overlay {
-    display: block;
     position: fixed;
     top: 0;
     right: 0;
@@ -52,7 +59,7 @@
     list-style: none;
     position: absolute;
     top: 15%;
-    right: 5%;
+    right: 0;
     text-align: end;
   }
   .navBarSectionText {
@@ -61,11 +68,15 @@
   .navBar {
     display: none;
   }
+  .buttonContainer {
+    margin-right: 0.75rem;
+    color: #b3b3b3;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .navBar {
-    display: block;
+    display: flex;
     height: 5.25rem;
     border-bottom: solid 2px #ffffff;
     position: fixed;
@@ -84,17 +95,27 @@
     width: 100vw;
     height: inherit;
     list-style: none;
+    color: #b3b3b3;
   }
   .navBarSectionText {
     margin-right: 3.5vw;
   }
   .listElement:last-of-type {
-    margin-right: 15vw;
+    margin-right: 8vw;
   }
   .navIcon {
     display: none;
   }
   .overlay {
     display: none;
+  }
+  .buttonContainer {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .listElement:last-of-type {
+    margin-right: 13vw;
   }
 }

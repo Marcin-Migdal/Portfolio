@@ -10,50 +10,49 @@ import javaScriptIcon from '../../resourse/images/skills/javaScript.png'
 import reactIcon from '../../resourse/images/skills/react.png'
 import scrumIcon from '../../resourse/images/skills/scrum.png'
 import SkillBox from '../SkillBox/SkillBox'
+import { useTranslation } from 'react-i18next';
 
 export default function Technologies() {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <div className="titleContainer">
-        <p className="title">Umiejętności i Technologie</p>
+        <p className="title">{t('technologies.title')}</p>
       </div>
       <div className={styles.skillsContainer}>
         <SkillBox
           image={html5Icon}
           name="Html"
-          description="Znajomość struktury dokumentu html, umiejętność posługiwania się tagami semantycznymi i non-semantycznymi" />
+          description={t('technologies.skillDescriptions.html')} />
         <SkillBox
           image={css3Icon}
           name="Css"
-          description="Umiejętność tworzenia responsywnych stron, płynnych przejść oraz kreatywność podczas tworzenia, dobra znajomość flex-box'u" />
+          description={t('technologies.skillDescriptions.css')} />
         <SkillBox
           image={javaScriptIcon}
           name="JavaScript"
-          description="Znajomość mechanizmów JavaScript jak i funkcjonalności ES6" />
+          description={t('technologies.skillDescriptions.javaScript')} />
         <SkillBox
           image={reactIcon}
           name="React"
-          description={
-            "Tworzenie aplikacji React, komunikowanie się z api za pomocą biblioteki Axios, znajomość react-hooks, react-redux, react-router. " +
-            "Stylowania komponentów za pomocą klasycznego css jak i css-in-js. " +
-            "Znajomość zewnętrznych bibliotek takich jak Material-Ui oraz i18next która umożliwia umiędzynarodowienie aplikacji"}
+          description={t('technologies.skillDescriptions.react')}
           wide={true} />
         <SkillBox
           image={scrumIcon}
           name="Scrum"
-          description="Kilku miesięczne doświadczenie z pracy w zespole scrumowym gdzie miałem okazje poznać metodyke scrum. Potrafie odnaleźć się w zespole oraz nie boje się poznawać oraz uczyć nowych rzeczy" />
+          description={t('technologies.skillDescriptions.scrum')} />
         <SkillBox
           image={gitIcon}
           name="Git"
-          description="Podstawowe umiejętność korzystania z rozproszonego systemu kontroli wersji, kilku miesięczne doświadczenie z pracy przy komercyjnych projektach" />
+          description={t('technologies.skillDescriptions.git')} />
         <SkillBox
           image={javaIcon}
           name="Java"
-          description="Umiejętność pisania aplikaji za pomocą jezyka Java, tworzenie oprogramowania back-end za pomocą frameworku Spring-Boot, testowanie aplikacji za pomocą środowiska spock" />
+          description={t('technologies.skillDescriptions.java')} />
         <SkillBox
           image={datebaseIcon}
-          name="DataBase"
-          description="Znajomość relacyjnych baz danych MySql jak i podstawowa umiejetność obsługiwania narzędzia MySql Workbench" />
+          name={t('technologies.skillName.dataBase')}
+          description={t('technologies.skillDescriptions.dataBase')} />
       </div>
     </div>
   )

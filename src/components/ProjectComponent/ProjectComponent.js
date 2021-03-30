@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import styles from './ProjectComponent.module.css'
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectComponent({ projectContentObject }) {
+  const { t } = useTranslation();
   const [imageIndex, setImageIndex] = useState(0);
   const [mobileImage, setMobileImage] = useState(false);
 
@@ -47,7 +49,7 @@ export default function ProjectComponent({ projectContentObject }) {
             {'<'}
           </button>
           <div className={styles.upperRightHighlight} />
-          <img className={mobileImage ? styles.mobileImage : styles.image} src={projectImageArray[imageIndex]} />
+          <img className={mobileImage ? styles.mobileImage : styles.image} src={projectImageArray[imageIndex]} alt={projectName + "Image"} />
           <div className={mobileImage ? styles.lowerRightHighlight : styles.lowerLeftHighlight} />
           <button className={styles.imageButton} onClick={nextImage}>
             {'>'}
@@ -56,7 +58,7 @@ export default function ProjectComponent({ projectContentObject }) {
         <div className={mobileImage ? styles.sideDescriptionContainer : styles.bottomDescriptionContainer}>
           <div className={styles.nameContainer}>
             <hr className={styles.nameLine} />
-            <p className={styles.projectSectionTitle}>Opis</p>
+            <p className={styles.projectSectionTitle}> {t('projects.titles.description')}</p>
             <hr className={styles.nameLine} />
           </div>
           <span className={styles.projectDescription}>
@@ -66,7 +68,7 @@ export default function ProjectComponent({ projectContentObject }) {
       </div>
       <div className={styles.nameContainer}>
         <hr className={styles.nameLine} />
-        <p className={styles.projectSectionTitleShort}>Technologie i biblioteki</p>
+        <p className={styles.projectSectionTitleShort}> {t('projects.titles.technologies')}</p>
         <hr className={styles.nameLine} />
       </div>
       <div className={styles.techStackContainer}>
