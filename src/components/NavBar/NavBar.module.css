@@ -1,0 +1,121 @@
+.navBarSectionText {
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.navBarSectionText:hover {
+  color: #000000;
+}
+
+.lngButton {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin: 0.25rem;
+  color: #b3b3b3;
+}
+
+@media only screen and (max-width: 599px) {
+  .navIcon {
+    background: none;
+    border: none;
+    outline: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    z-index: 3;
+  }
+  .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    transition: 0.4s;
+    background-color: #b3b3b3;
+  }
+  .line.open:nth-of-type(2) {
+    width: 17px;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85vw;
+    background-color: #ffe8dc;
+    opacity: 0.95;
+    transition: 0.4s;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .overlay.open {
+    height: 80vh;
+  }
+  .overlay.closed {
+    height: 0;
+  }
+  .overlayMenu {
+    list-style: none;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    text-align: end;
+  }
+  .navBarSectionText {
+    margin: 1rem;
+  }
+  .navBar {
+    display: none;
+  }
+  .buttonContainer {
+    margin-right: 0.75rem;
+    color: #b3b3b3;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navBar {
+    display: flex;
+    height: 5.25rem;
+    border-bottom: solid 2px #ffffff;
+    position: fixed;
+    top: 0;
+    transition: 0.4s;
+    z-index: 2;
+  }
+  .navBar.active {
+    height: 3rem;
+    background-color: #ffdecc;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+    height: inherit;
+    list-style: none;
+    color: #b3b3b3;
+  }
+  .navBarSectionText {
+    margin-right: 3.5vw;
+  }
+  .listElement:last-of-type {
+    margin-right: 8vw;
+  }
+  .navIcon {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .buttonContainer {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .listElement:last-of-type {
+    margin-right: 13vw;
+  }
+}

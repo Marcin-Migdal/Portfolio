@@ -1,0 +1,48 @@
+{
+  "navbar": {
+    "home": "Strona główna",
+    "aboutMe": "O mnie",
+    "projects": "Projekty",
+    "technologies": "Technologie",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "shortDescription": "Nazywam się Marcin Migdał i jestem absolwentem Państwowej Wyższej Szkoły Zawodowej w Tarnowie.",
+    "downLoadButton": "Pobierz CV"
+  },
+  "aboutMe": "Od lipca 2019 roku odbyłem cztero miesięczny staż w firmie Hcm Deck, gdzie byłem stażystą na stanowisku Junior Java Developer. Do moich obowiązków należało tworzenie części mikroserwisów w technologii Java Spring, jak również tworzenie komponentów front-end w technologii React. To tam po raz pierwszy miałem styczność z tworzeniem prawdziwych aplikaji front-end.\n\n Zdobyłem tytuł Inżyniera w czerwcu 2020 roku na kierunku Informatyka Stosowana, ze specjalizacją w zakresie inżynierii systemów informatycznych. W momencie zakończenia studiów zdecydowałem, że chce robić to, co sprawia mi największą przyjemność w dziedzinie programowania, czyli tworzenie aplikacji front-end, a poznawanie nowych technologii oraz funkcjonalości dzięki którym będę mógł usprawnić moje projekty napędza moją ciekawość.",
+  "projects": {
+    "munchtrack": {
+      "name": "Munchtrack",
+      "description": "Serwis Munchtrack został stworzony z myślą aby umożliwić łatwiejsze śledzenie rozgrywki w grze karcianej Munchkin. Serwis ten umożliwia założenie konta użytkownika oraz stworzenie pokoi do których mogą dołączać inni użytkownicy. Po dołączeniu do pokoju mogą oni zapisywać postęp swojej postaci oraz obserwować postacie swoich przeciwników."
+    },
+    "portfolio": {
+      "name": "Portfolio",
+      "description": "Portfolio powstało z intencją poprawienia moich umiejętności tworzenia responsywnych statycznych stron internetowych, jak i lepszemu przedstawieniu informacji o mnie, jako programisty, w postaci innej niż CV."
+    },
+    "ethoLottery": {
+      "name": "EthoLottery",
+      "description": "EthoLottery to strona która operuje w testowej sieci Ethereum o nazwie Rinkeby. Jest to prosta strona loterii, gdzie jako waluty używa się ether'u, ether ten nie ma żadnej wartości, jest on używany jako testowa waluta w sieci testowej. Aby strona w pełni działała potrzebna jest wtyczka do przeglądarki chrome o nazwie MetaMask, jak i założenie konta w sieci ethereum i połączenie go z wtyczką MetaMask."
+    },
+    "titles": {
+      "description": "Opis",
+      "technologies": "Technologie i biblioteki"
+    }
+  },
+  "technologies": {
+    "title": "Umiejętności i Technologie",
+    "skillName": {
+      "dataBase": "Bazy danych"
+    },
+    "skillDescriptions": {
+      "html": "Znajomość struktury dokumentu html, umiejętność posługiwania się tagami semantycznymi i non-semantycznymi.",
+      "css": "Umiejętność tworzenia responsywnych stron, płynnych przejść, kreatywność podczas tworzenia oraz dobra znajomość flex-box'u.",
+      "javaScript": "Znajomość mechanizmów JavaScript, jak i funkcjonalności ES6.",
+      "react": "Tworzenie aplikacji React, komunikowanie się z api za pomocą biblioteki Axios. Znajomość React-Hooks, zewnętrznych bibliotek takich jak React-Redux, React-Router, Material-Ui, i18next, która umożliwia umiędzynarodowienie aplikacji oraz stylowania komponentów za pomocą klasycznego Css jak i Css-in-Js.",
+      "scrum": "Kilku miesięczne doświadczenie z pracy w zespole scrumowym, gdzie miałem okazje poznać metodykę scrum. Potrafię odnaleźć się w zespole, nie boje się poznawać oraz uczyć nowych rzeczy.",
+      "git": "Podstawowe umiejętności korzystania z rozproszonego systemu kontroli wersji. Kilkumiesięczne doświadczenie z pracy przy komercyjnych projektach.",
+      "java": "Umiejętność pisania aplikaji za pomocą języka Java. Tworzenie oprogramowania back-end z użyciem frameworku Spring-Boot oraz testowanie aplikacji za pomocą środowiska spock.",
+      "dataBase": "Znajomość relacyjnych baz danych MySql, jak i podstawowa umiejetność obsługiwania narzędzia MySql Workbench."
+    }
+  }
+}

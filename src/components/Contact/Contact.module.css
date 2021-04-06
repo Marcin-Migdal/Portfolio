@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  width: 100%;
+  background-color: #ffe8dc;
+}
+
+.contactButton {
+  margin-top: 0.25rem;
+  border-radius: 10px;
+  color: #b3b3b3;
+  font-size: 1.125rem;
+  text-decoration: none;
+  text-align: center;
+  transition: 1s;
+}
+
+.contactButton:active {
+  color: #000000;
+  transition: 0.2s;
+}
+
+.contactContainer {
+  display: flex;
+  align-items: center;
+}
+
+.emailLabel {
+  margin-right: 0.3rem;
+  font-size: 1.125rem;
+  color: #b3b3b3;
+}
+
+.contact {
+  font-size: 1.125rem;
+  width: 16.5rem;
+  height: 1.6rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+  color: #b3b3b3;
+}
+
+.copyClipboardIcon {
+  width: 2.1rem;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.copyClipboardIcon:hover {
+  background-color: #ffd4c2;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    margin-left: calc((100% - 65%) / 4); 
+    padding: 0 6vw 4vw 6vw; 
+    padding-top: 0;
+    width: calc(100% - (100% - 65%) / 2);
+  }
+  .contactButton {
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
+  }
+
+  .emailLabel {
+    margin-right: 0.3rem;
+    font-size: 1.25rem;
+  }
+
+  .contact {
+    font-size: 1.25rem;
+    width: 18.5rem;
+    height: 1.8rem;
+  }
+
+  .contactButton:hover {
+    color: #000000;
+    transition: 0.6s;
+  }
+}

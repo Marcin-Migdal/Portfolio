@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+}
+
+.skillsContainer {
+  background-color: #ffe8dc;
+}
+
+@media only screen and (min-width: 600px) { 
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: solid 2px #ffffff;
+  }
+}
