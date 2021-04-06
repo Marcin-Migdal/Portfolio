@@ -1,19 +1,24 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.1472cc5a.chunk.css",
-    "main.js": "/Portfolio/static/js/main.b1a618f6.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.b1a618f6.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.5c9239e9.chunk.css",
+    "main.js": "/Portfolio/static/js/main.1c369e11.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.1c369e11.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.eb6781d5.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.eb6781d5.js.map",
     "static/js/2.af07982c.chunk.js": "/Portfolio/static/js/2.af07982c.chunk.js",
     "static/js/2.af07982c.chunk.js.map": "/Portfolio/static/js/2.af07982c.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.1472cc5a.chunk.css.map": "/Portfolio/static/css/main.1472cc5a.chunk.css.map",
+    "static/css/main.5c9239e9.chunk.css.map": "/Portfolio/static/css/main.5c9239e9.chunk.css.map",
     "static/js/2.af07982c.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.af07982c.chunk.js.LICENSE.txt",
+    "static/media/PortfolioHome.be568466.png": "/Portfolio/static/media/PortfolioHome.be568466.png",
+    "static/media/PortfolioHomeMobile.07e6aad2.png": "/Portfolio/static/media/PortfolioHomeMobile.07e6aad2.png",
     "static/media/copyClipboardIcon.e275c66b.jpg": "/Portfolio/static/media/copyClipboardIcon.e275c66b.jpg",
     "static/media/css3.e8f849a8.png": "/Portfolio/static/media/css3.e8f849a8.png",
-    "static/media/cv.b0e454f6.pdf": "/Portfolio/static/media/cv.b0e454f6.pdf",
+    "static/media/cv_eng.0469c14b.pdf": "/Portfolio/static/media/cv_eng.0469c14b.pdf",
+    "static/media/cv_pl.577e67ab.pdf": "/Portfolio/static/media/cv_pl.577e67ab.pdf",
     "static/media/database.70cf351c.png": "/Portfolio/static/media/database.70cf351c.png",
+    "static/media/ethoLottery.deae6cdd.png": "/Portfolio/static/media/ethoLottery.deae6cdd.png",
+    "static/media/ethoLotteryMobile.6031da90.png": "/Portfolio/static/media/ethoLotteryMobile.6031da90.png",
     "static/media/extendedGame.d128b1e3.png": "/Portfolio/static/media/extendedGame.d128b1e3.png",
     "static/media/extendedGame.f391b9e2.png": "/Portfolio/static/media/extendedGame.f391b9e2.png",
     "static/media/game.57b0eec8.png": "/Portfolio/static/media/game.57b0eec8.png",
@@ -41,7 +46,7 @@
   "entrypoints": [
     "static/js/runtime-main.eb6781d5.js",
     "static/js/2.af07982c.chunk.js",
-    "static/css/main.1472cc5a.chunk.css",
-    "static/js/main.b1a618f6.chunk.js"
+    "static/css/main.5c9239e9.chunk.css",
+    "static/js/main.1c369e11.chunk.js"
   ]
 }
