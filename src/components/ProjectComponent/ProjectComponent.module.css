@@ -65,6 +65,52 @@
   position: relative;
 }
 
+.demoOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 99%;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.demoButton {
+  padding: 0.1rem 0.3rem;
+  color: #ffffff;
+  background-color: #333333;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  outline: none;
+  opacity: 0.7;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.demoButton:active {
+  color: #ffffff;
+  background-color: #333333;
+  border: 2px solid #ffffff;
+  opacity: 1;
+}
+
+.image,
+.mobileImage {
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.image {
+  width: 79vw;
+}
+
+.mobileImage {
+  width: 25vh;
+}
+
 .imageButton {
   position: absolute;
   top: 42%;
@@ -101,23 +147,12 @@
   display: none;
 }
 
-.image {
-  width: 79vw;
-  height: 46vw;
-  border-radius: 12px;
-}
-
-.mobileImage {
-  width: 25vh;
-  height: 50vh;
-  border-radius: 12px;
-}
-
 .bottomDescriptionContainer,
 .sideDescriptionContainer {
   width: 90%;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  white-space: pre-line;
 }
 
 .projectSectionTitle,
@@ -199,6 +234,29 @@
     margin: 1.75rem 0 4rem 0;
   }
 
+  .demoOverlay > .demoButton {
+    opacity: 0.5;
+  }
+
+  .demoOverlay:hover > .demoButton {
+    opacity: 1;
+  }
+
+  .demoButton {
+    padding: 0.2rem 0.4rem;
+    background-color: #333333;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+
+  .demoButton:hover {
+    opacity: 1;
+  }
+
+  .demoButton:active {
+    background-color: #1a1a1a;
+  }
+
   .imageButton {
     top: 42%;
     width: 3rem;
@@ -218,14 +276,14 @@
 
   .image {
     width: 56vw;
-    height: 31vw;
     border-radius: 16px 0 16px 0;
+    border-width: 2px;
   }
 
   .mobileImage {
     width: 17vw;
-    height: 35vw;
     border-radius: 16px 0 0 16px;
+    border-width: 1px;
   }
 
   .upperRightHighlight,

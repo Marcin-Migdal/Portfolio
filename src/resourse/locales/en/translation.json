@@ -7,22 +7,22 @@
     "contact": "Contact"
   },
   "home": {
-    "shortDescription": "Nazywam się Marcin Migdał i jestem absolwentem Państwowej Wyższej Szkoły Zawodowej w Tarnowie.",
+    "shortDescription": "My name is Marcin Migdał. I'm a graduate of Państwa Wyższa Szkoła Zawodowa w Tarnowie.",
     "downLoadButton": "Download CV"
   },
-  "aboutMe": "Od lipca 2019 roku odbyłem cztero miesięczny staż w firmie Hcm Deck, gdzie byłem stażystą na stanowisku Junior Java Developer. Do moich obowiązków należało tworzenie komponentów mikroserwisów w technologi Java Spring jak również tworzenie komponentów front-end w technologi React, to tam po raz pierwszy miałem styczność z tworzeniem prawdziwych aplikaji \nfront-end.\n\n Zdobyłem tytuł Inżyniera w czerwcu 2020 roku na kierunku Informatyka Stosowana, ze specjalizacją w zakresie inżynierii systemów informatycznych. W momencie zakończenia studiów zdecydowałem że chce robić to co sprawia mi największą przyjemność w dziedzinie programowania, czyli tworzenie aplikacji front-end.\n\nWybrałem tworzenie aplikacji front-end ponieważ tworzenie nowych aplikacji oraz usprawnianie tych przy których obecnie pracuje daje mi wiele satysfakcji, a poznawanie nowych technologii oraz funkcjonalości dzięki którym będę mógł usprawnić moje projekty napędza moją ciekawość.",
+  "aboutMe": "From July 2019, i had four-month internship in company Hcm Deck, where i was an intern as Junior Java Developer. I was responsible for developing microservices in Java Spring technology, as well as creating front-end components in React. It was there where i experienced for the first time developing a real front-end application.\n\n I graduated in june 2020 and my field of study was Computer Science, my major was information systems engineering. When i graduated, i decided that i want to do things that makes me feel the biggest joy in programming field, i.e. creating front-end applications, learnig about new technologies and functionalities thanks to which i will be able to improve my projects fuels my curiosity.",
   "projects": {
     "munchtrack": {
       "name": "Munchtrack",
-      "description": "Serwis Munchtrack został stworzony z myślą aby umożliwić łatwiejsze śledzenie rozgrywki w grze karcianej munchkin,serwis umożliwia założenie konta użytkownika oraz stworzenie pokoi do których mogą dołączać inni użytkownicy,po dołączeniu do pokoju mogą oni zapisywać postęp swojej postaci oraz obserwować postacie swoich przeciwników."
+      "description": "Service Munchtrack was created with a though to make munchkin card game to be easier to follow, service makes it possible to register as a user and create a rooms to which other players can join. While in room, players can save thier character progress and follow opponents progress."
     },
     "portfolio": {
       "name": "Portfolio",
-      "description": ""
+      "description": "Portfolio was made with intend to imporve my skills in creating responsive static websites, as well as better presentation of information about me, as a developer, in a form other than a CV"
     },
     "ethoLottery": {
       "name": "EthoLottery",
-      "description": ""
+      "description": "EthoLottery is a website which operates in ethereum test network called Rinkeby. It is a simple one page lottery website, where ether is used as currency, ether here has no real value, it is only used in test network as test currency. For website to work properly chrome plugin called MetaMask is needed, as well as creating account in ethereum network and connecting it with MetaMask plugin."
     },
     "titles": {
       "description": "Description",
@@ -35,14 +35,14 @@
       "dataBase": "Database"
     },
     "skillDescriptions": {
-      "html": "Znajomość struktury dokumentu html, umiejętność posługiwania się tagami semantycznymi i non-semantycznymi",
-      "css": "Umiejętność tworzenia responsywnych stron, płynnych przejść oraz kreatywność podczas tworzenia, dobra znajomość flex-box'u",
-      "javaScript": "Znajomość mechanizmów JavaScript jak i funkcjonalności ES6",
-      "react": "Tworzenie aplikacji React, komunikowanie się z api za pomocą biblioteki Axios, znajomość react-hooks, react-redux, react-router. Stylowania komponentów za pomocą klasycznego css jak i css-in-js. Znajomość zewnętrznych bibliotek takich jak Material-Ui oraz i18next która umożliwia umiędzynarodowienie aplikacji",
-      "scrum": "Kilku miesięczne doświadczenie z pracy w zespole scrumowym gdzie miałem okazje poznać metodyke scrum. Potrafie odnaleźć się w zespole oraz nie boje się poznawać oraz uczyć nowych rzeczy",
-      "git": "Podstawowe umiejętność korzystania z rozproszonego systemu kontroli wersji, kilku miesięczne doświadczenie z pracy przy komercyjnych projektach",
-      "java": "Umiejętność pisania aplikaji za pomocą jezyka Java, tworzenie oprogramowania back-end za pomocą frameworku Spring-Boot, testowanie aplikacji za pomocą środowiska spock",
-      "dataBase": "Znajomość relacyjnych baz danych MySql jak i podstawowa umiejetność obsługiwania narzędzia MySql Workbench"
+      "html": "Knowledge of html document structure, the ability to use semantic and non-semantic tags.",
+      "css": "The ability to create responsive websites, smooth transitions, creative in creating and good knowledge of flex-box'u.",
+      "javaScript": "Knowledge of JavaScript mechanisms, as well as ES6 functionalities.",
+      "react": "Creating react applications, communicating with api using Axios. Knowledge of React-Hooks, external libraries such as React-Redux, React-Router, Material-Ui, i18next, which makes internationalization possible and styling components using classic Css as well as Css-in-Js",
+      "scrum": "Several months of experience from working in a scrum team, in which o had occasion to learn scrum methodology. I can fit in well with the team and i'm not afraid to expierence and learn new things.",
+      "git": "Basic ability to use Distributed Version Control System. Several months of experience from working on commercial projects.",
+      "java": "Ability to develop software with a use of Java programing language. Creating back-end software with a use of Spring-Boot framework as well as testing application with spock framework.",
+      "dataBase": "Knowledge of relative database MySql, as well as basic skill of using MySql Workbench."
     }
   }
 }

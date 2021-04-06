@@ -21,6 +21,13 @@ import searchResultImageMobile from '../../resourse/images/projects/munchtrack/m
 import settingsImageMobile from '../../resourse/images/projects/munchtrack/mobile/settings.png'
 import ProjectComponent from '../ProjectComponent/ProjectComponent'
 
+import portfolioHomeImage from '../../resourse/images/projects/portfolio/PortfolioHome.png'
+import portfolioHomeImageMobile from '../../resourse/images/projects/portfolio/PortfolioHomeMobile.png'
+
+import ethoLotteryImage from '../../resourse/images/projects/ethoLottery/desktop/ethoLottery.png'
+import ethoLotteryImageMobile from '../../resourse/images/projects/ethoLottery/mobile/ethoLotteryMobile.png'
+
+
 export default function Projects() {
   const { t } = useTranslation();
 
@@ -51,37 +58,40 @@ export default function Projects() {
     },
     techStack: {
       frontEnd: ['React', 'React-Hooks', 'React-Redux', 'React-Router', 'Material-Ui', 'i18next', 'React-Icons', 'React-Perfect-Scrollbar'],
-      backEnd: ['Java', 'Spring-Boot', 'MySql']
+      backEnd: ['Java', 'Spring-Boot', 'JPA', 'MySql']
     },
-    githubUrl: "https://github.com/Marcin-Migdal/Munchtrack-client"
+    githubUrl: "https://github.com/Marcin-Migdal/Munchtrack-client",
+    demoUrl: false
   }
 
   const portfolioContentObject = {
     projectName: t('projects.portfolio.name'),
     description: t('projects.portfolio.description'),
     images: {
-      mobile: [welcomeImageMobile],
-      desktop: [welcomeImage]
+      mobile: [portfolioHomeImageMobile],
+      desktop: [portfolioHomeImage]
     },
     techStack: {
       frontEnd: ['React', 'React-Hooks', 'i18next'],
       backEnd: false
     },
-    githubUrl: "https://github.com/Marcin-Migdal/Portfolio"
+    githubUrl: "https://github.com/Marcin-Migdal/Portfolio",
+    demoUrl: false
   }
 
   const lotteryContentObject = {
     projectName: t('projects.ethoLottery.name'),
     description: t('projects.ethoLottery.description'),
     images: {
-      mobile: [welcomeImageMobile],
-      desktop: [welcomeImage]
+      mobile: [ethoLotteryImageMobile],
+      desktop: [ethoLotteryImage]
     },
     techStack: {
       frontEnd: ['React', 'React-Hooks', 'web3'],
       backEnd: ['Solidity']
     },
-    githubUrl: "https://github.com/Marcin-Migdal/Portfolio"
+    githubUrl: "https://github.com/Marcin-Migdal/EthoLottery",
+    demoUrl: "https://marcin-migdal.github.io/EthoLottery/"
   }
 
   return (

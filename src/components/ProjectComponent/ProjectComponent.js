@@ -7,7 +7,7 @@ export default function ProjectComponent({ projectContentObject }) {
   const [imageIndex, setImageIndex] = useState(0);
   const [mobileImage, setMobileImage] = useState(false);
 
-  const { projectName, description, images, techStack, githubUrl } = projectContentObject;
+  const { projectName, description, images, techStack, githubUrl, demoUrl } = projectContentObject;
   const projectImageArray = mobileImage ? images.mobile : images.desktop;
 
   const prevImage = () => {
@@ -45,15 +45,25 @@ export default function ProjectComponent({ projectContentObject }) {
       }
       <div className={mobileImage ? styles.mobileImageContentContainer : styles.desktopImageContentContainer}>
         <div className={styles.imageContainer}>
-          <button className={styles.imageButton} onClick={prevImage}>
-            {'<'}
-          </button>
+          {demoUrl &&
+            <div className={styles.demoOverlay}>
+              <a className={styles.demoButton} href={demoUrl}> Demo</a>
+            </div>
+          }
+
+          {projectImageArray.length > 1 &&
+            <button className={styles.imageButton} onClick={prevImage}>
+              {'<'}
+            </button>
+          }
           <div className={styles.upperRightHighlight} />
-          <img className={mobileImage ? styles.mobileImage : styles.image} src={projectImageArray[imageIndex]} alt={projectName + "Image"} />
           <div className={mobileImage ? styles.lowerRightHighlight : styles.lowerLeftHighlight} />
-          <button className={styles.imageButton} onClick={nextImage}>
-            {'>'}
-          </button>
+          <img className={mobileImage ? styles.mobileImage : styles.image} src={projectImageArray[imageIndex]} alt={projectName + "Image"} />
+          {projectImageArray.length > 1 &&
+            <button className={styles.imageButton} onClick={nextImage}>
+              {'>'}
+            </button>
+          }
         </div>
         <div className={mobileImage ? styles.sideDescriptionContainer : styles.bottomDescriptionContainer}>
           <div className={styles.nameContainer}>
