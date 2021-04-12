@@ -13,7 +13,6 @@
 }
 
 .image {
-  height: 27rem;
   width: 18rem;
 }
 
@@ -47,7 +46,6 @@
     padding-bottom: 5rem;
   }
   .image {
-    height: 50vw;
     width: 31vw;
   }
   .name {
@@ -79,7 +77,6 @@
     width: calc(100% - (100% - 1024px) / 2);
   }
   .image {
-    height: 40rem;
     width: 26rem;
   }
   .subContentContainer {
