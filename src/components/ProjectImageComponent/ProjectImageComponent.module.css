@@ -1,0 +1,183 @@
+.imageContainer {
+  position: relative;
+}
+
+.demoButton {
+  padding: 0.2rem 0.5rem;
+  outline: none;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  background-color: #333333;
+  opacity: 0.6;
+  transition: 0.4s;
+  text-decoration: none;
+  user-select: none;
+}
+
+.demoButton:active {
+  opacity: 1;
+}
+
+.imageArrowButton {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.emptyDummyButton {
+  width: 2rem;
+  height: 2rem;
+}
+
+.imageArrowButton:active {
+  background-color: #e6e6e6;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.imageArrowButton:nth-of-type(2) {
+  transform: rotate(180deg);
+}
+
+.arrowIcon {
+  width: 90%;
+}
+
+.upperRightHighlight,
+.lowerLeftHighlight,
+.lowerRightHighlight {
+  display: none;
+}
+
+.image,
+.mobileImage {
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.image {
+  width: 79vw;
+}
+
+.mobileImage {
+  width: 25vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 1.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 99%;
+  width: 97%;
+}
+
+@media only screen and (min-width: 600px) {
+  .demoButton {
+    background-color: #595959;
+    font-size: 1.1rem;
+    opacity: 0.15;
+    cursor: pointer;
+  }
+
+  .demoButton:hover {
+    background-color: #333333;
+  }
+
+  .demoButton:active {
+    transform: scale(0.95);
+    transition: 0.1s;
+  }
+
+  .overlayBackGround {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    border-radius: 16px 0 16px 0;
+    background-color: #bfbfbf;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  .imageContainer:hover > .overlayBackGround {
+    opacity: 0.15;
+  }
+
+  .overlay:hover > .demoButton {
+    opacity: 0.9;
+  }
+
+  .imageArrowButton,
+  .emptyDummyButton {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .imageArrowButton {
+    transition: 0.5s;
+  }
+
+  .imageArrowButton:hover {
+    background-color: #cccccc;
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+
+  .imageArrowButton:active {
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  .image {
+    width: 56vw;
+    border-radius: 16px 0 16px 0;
+    border-width: 2px;
+  }
+
+  .mobileImage {
+    width: 17vw;
+    border-radius: 16px 0 0 16px;
+    border-width: 1px;
+  }
+
+  .upperRightHighlight,
+  .lowerLeftHighlight,
+  .lowerRightHighlight {
+    display: block;
+    position: absolute;
+    border: #ffffff solid;
+    min-width: 3rem;
+    width: 5vw;
+    min-height: 3rem;
+    height: 5vw;
+  }
+
+  .upperRightHighlight {
+    top: -1.5vw;
+    right: -1.5vw;
+    border-width: 3px 3px 0 0;
+  }
+
+  .lowerLeftHighlight {
+    bottom: -1.5vw;
+    left: -1.5vw;
+    border-width: 0 0 3px 3px;
+  }
+
+  .lowerRightHighlight {
+    bottom: -1.5vw;
+    right: -1.5vw;
+    left: auto;
+    border-width: 0 3px 3px 0;
+  }
+}

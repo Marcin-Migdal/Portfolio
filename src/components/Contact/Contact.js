@@ -34,7 +34,7 @@ export default function Contact() {
           value="marcin.migdal1996@gmail.com"
         />
         <img
-          alt="copy"
+          alt="copy email"
           onClick={copyTextToClipboard}
           className={styles.copyClipboardIcon}
           src={copyClipboardIcon} />
