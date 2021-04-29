@@ -1,108 +1,85 @@
 import React, { useState } from 'react'
 import styles from './ProjectComponent.module.css'
 import { useTranslation } from 'react-i18next';
+import ProjectImageComponent from '../ProjectImageComponent/ProjectImageComponent';
 
-export default function ProjectComponent({ projectContentObject }) {
+export default function ProjectComponent({ projectContentObject, closeProject }) {
   const { t } = useTranslation();
-  const [imageIndex, setImageIndex] = useState(0);
   const [mobileImage, setMobileImage] = useState(false);
 
-  const { projectName, description, images, techStack, githubUrl, demoUrl } = projectContentObject;
+  const { projectName, images, techStack, githubUrl, demoUrl } = projectContentObject;
   const projectImageArray = mobileImage ? images.mobile : images.desktop;
-
-  const prevImage = () => {
-    if (imageIndex - 1 >= 0) {
-      setImageIndex(imageIndex - 1)
-    }
-  }
-
-  const nextImage = () => {
-    if (imageIndex + 1 < projectImageArray.length) {
-      setImageIndex(imageIndex + 1)
-    }
-  }
 
   const setImageType = (imageType) => {
     setMobileImage(imageType)
   }
 
+  const ToggleButton = ({ condition, handleClick, text }) => {
+    return (
+      <button
+        className={condition ? `${styles.switchButton} ${styles.switchButtonActive}` : styles.switchButton}
+        onClick={handleClick}>
+        {text}
+      </button >
+    )
+  }
+
+  const TechStackList = ({ title, techStack }) => {
+    return (
+      <ul className={styles.techStackList}>
+        <p className={styles.techStackTitle}>{title}</p>
+        {techStack.map((item, index) => {
+          return (
+            <li key={index} className={styles.listText}>
+              {item}
+            </li>
+          )
+        })}
+      </ul>
+    )
+  }
+
+  const ProjectSectionTitle = ({ title }) => {
+    return (
+      <div className={styles.nameContainer}>
+        <hr className={styles.nameLine} />
+        <p className={styles.projectSectionTitle}>{title}</p>
+        <hr className={styles.nameLine} />
+      </div>
+    )
+  }
+
   return (
     <div className={styles.projectContainer}>
-      <p className={styles.name}>{projectName}</p>
+      <p className={styles.name}>{t('projects.' + projectName + '.name')}</p>
       {images.mobile &&
         <div className={styles.switchButtonsContainer}>
-          <button
-            className={!mobileImage ? `${styles.switchButton} ${styles.switchButtonActive}` : styles.switchButton}
-            onClick={() => setImageType(false)}>
-            Desktop
-          </button >
-          <button
-            className={mobileImage ? `${styles.switchButton} ${styles.switchButtonActive}` : styles.switchButton}
-            onClick={() => setImageType(true)}>
-            Mobile
-          </button>
+          <button className={`button ${styles.buttonPosition}`} onClick={closeProject}>{t('projects.backButton')}</button>
+          <ToggleButton condition={!mobileImage} text='Desktop' handleClick={() => setImageType(false)} />
+          <ToggleButton condition={mobileImage} text='Mobile' handleClick={() => setImageType(true)} />
         </div>
       }
       <div className={mobileImage ? styles.mobileImageContentContainer : styles.desktopImageContentContainer}>
-        <div className={styles.imageContainer}>
-          {demoUrl &&
-            <div className={styles.demoOverlay}>
-              <a className={styles.demoButton} href={demoUrl}> Demo</a>
-            </div>
-          }
-
-          {projectImageArray.length > 1 &&
-            <button className={styles.imageButton} onClick={prevImage}>
-              {'<'}
-            </button>
-          }
-          <div className={styles.upperRightHighlight} />
-          <div className={mobileImage ? styles.lowerRightHighlight : styles.lowerLeftHighlight} />
-          <img className={mobileImage ? styles.mobileImage : styles.image} src={projectImageArray[imageIndex]} alt={projectName + "Image"} />
-          {projectImageArray.length > 1 &&
-            <button className={styles.imageButton} onClick={nextImage}>
-              {'>'}
-            </button>
-          }
-        </div>
+        <ProjectImageComponent
+          projectImageArray={projectImageArray}
+          demoUrl={demoUrl}
+          projectName={projectName}
+          mobileImage={mobileImage}
+        />
         <div className={mobileImage ? styles.sideDescriptionContainer : styles.bottomDescriptionContainer}>
-          <div className={styles.nameContainer}>
-            <hr className={styles.nameLine} />
-            <p className={styles.projectSectionTitle}> {t('projects.titles.description')}</p>
-            <hr className={styles.nameLine} />
-          </div>
+          <ProjectSectionTitle title={t('projects.titles.description')} />
           <span className={styles.projectDescription}>
-            {description}
+            {t('projects.' + projectName + '.description')}
           </span>
         </div>
       </div>
-      <div className={styles.nameContainer}>
-        <hr className={styles.nameLine} />
-        <p className={styles.projectSectionTitleShort}> {t('projects.titles.technologies')}</p>
-        <hr className={styles.nameLine} />
-      </div>
-      <div className={styles.techStackContainer}>
-        <ul className={!techStack.backEnd ? styles.singleTechStackList : styles.techStackList}>
-          <p className={styles.projectSectionSubTitle}>Front-End</p>
-          {techStack.frontEnd.map((item, index) => {
-            return (
-              <li key={index} className={styles.listText}>
-                {item}
-              </li>
-            )
-          })}
-        </ul>
+
+      <ProjectSectionTitle title={t('projects.titles.technologies')} />
+
+      <div className={techStack.backEnd ? styles.techStackContainer : styles.singleTechStackContainer}>
+        <TechStackList techStack={techStack.frontEnd} title='Front-End' />
         {techStack.backEnd &&
-          <ul className={styles.techStackList}>
-            <p className={styles.projectSectionSubTitle}>Back-End</p>
-            {techStack.backEnd.map((item, index) => {
-              return (
-                <li key={index} className={styles.listText}>
-                  {item}
-                </li>
-              )
-            })}
-          </ul>
+          <TechStackList techStack={techStack.backEnd} title='Back-End' />
         }
       </div>
       <a className="button" href={githubUrl}>GitHub</a>

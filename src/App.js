@@ -20,7 +20,7 @@ export default function App() {
         <AboutMe />
       </div>
       <div className="sectionContainer" ref={el => refArray.current[1] = el}>
-        <Projects />
+        <Projects refArray={refArray} />
       </div>
       <div className="sectionContainer" ref={el => refArray.current[2] = el}>
         <Technologies />

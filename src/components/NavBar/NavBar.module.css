@@ -99,6 +99,7 @@
   }
   .navBarSectionText {
     margin-right: 3.5vw;
+    cursor: pointer;
   }
   .listElement:last-of-type {
     margin-right: 8vw;
@@ -111,6 +112,9 @@
   }
   .buttonContainer {
     margin-right: 2rem;
+  }
+  .lngButton { 
+    cursor: pointer;
   }
 }
 

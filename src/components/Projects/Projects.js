@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Projects.module.css'
 import { useTranslation } from 'react-i18next';
 
@@ -10,6 +10,7 @@ import roomsImage from '../../resourse/images/projects/munchtrack/desktop/rooms.
 import searchBarImage from '../../resourse/images/projects/munchtrack/desktop/searchBar.png'
 import searchResultImage from '../../resourse/images/projects/munchtrack/desktop/searchResult.png'
 import settingsImage from '../../resourse/images/projects/munchtrack/desktop/settings.png'
+import ProjectComponent from '../ProjectComponent/ProjectComponent'
 
 import welcomeImageMobile from '../../resourse/images/projects/munchtrack/mobile/welcomePage.png'
 import extendedGameImageMobile from '../../resourse/images/projects/munchtrack/mobile/extendedGame.png'
@@ -19,21 +20,32 @@ import roomsImageMobile from '../../resourse/images/projects/munchtrack/mobile/r
 import searchBarImageMobile from '../../resourse/images/projects/munchtrack/mobile/searchBar.png'
 import searchResultImageMobile from '../../resourse/images/projects/munchtrack/mobile/searchResult.png'
 import settingsImageMobile from '../../resourse/images/projects/munchtrack/mobile/settings.png'
-import ProjectComponent from '../ProjectComponent/ProjectComponent'
 
-import portfolioHomeImage from '../../resourse/images/projects/portfolio/PortfolioHome.png'
-import portfolioHomeImageMobile from '../../resourse/images/projects/portfolio/PortfolioHomeMobile.png'
+import portfolioHomeImage from '../../resourse/images/projects/portfolio/desktop/PortfolioHome.png'
+import portfolioHomeImageMobile from '../../resourse/images/projects/portfolio/mobile/PortfolioHomeMobile.png'
 
 import ethoLotteryImage from '../../resourse/images/projects/ethoLottery/desktop/ethoLottery.png'
+import ethoLotteryEnteredImage from '../../resourse/images/projects/ethoLottery/desktop/ethoLotteryEntered.png'
 import ethoLotteryImageMobile from '../../resourse/images/projects/ethoLottery/mobile/ethoLotteryMobile.png'
+import ethoLotteryEnteredMobile from '../../resourse/images/projects/ethoLottery/mobile/ethoLotteryEnteredMobile.png'
 
+import toDoListImage from '../../resourse/images/projects/toDoList/desktop/toDoList.png'
+import addTaskImage from '../../resourse/images/projects/toDoList/desktop/addTask.png'
+import emptyListImage from '../../resourse/images/projects/toDoList/desktop/emptyList.png'
+import extendedTaskImage from '../../resourse/images/projects/toDoList/desktop/extendedTask.png'
 
-export default function Projects() {
+import toDoListImageMobile from '../../resourse/images/projects/toDoList/mobile/toDoList.png'
+import addTaskImageMobile from '../../resourse/images/projects/toDoList/mobile/addTask.png'
+import emptyListImageMobile from '../../resourse/images/projects/toDoList/mobile/emptyList.png'
+import extendedTaskImageMobile from '../../resourse/images/projects/toDoList/mobile/extendedTask.png'
+import ProjectBox from '../ProjectBox/ProjectBox';
+
+export default function Projects({ refArray }) {
   const { t } = useTranslation();
+  const [projectObject, setProjectObject] = useState(false);
 
   const munchtrackContentObject = {
-    projectName: t('projects.munchtrack.name'),
-    description: t('projects.munchtrack.description'),
+    projectName: 'munchtrack',
     images: {
       mobile: [
         welcomeImageMobile,
@@ -65,8 +77,7 @@ export default function Projects() {
   }
 
   const portfolioContentObject = {
-    projectName: t('projects.portfolio.name'),
-    description: t('projects.portfolio.description'),
+    projectName: 'portfolio',
     images: {
       mobile: [portfolioHomeImageMobile],
       desktop: [portfolioHomeImage]
@@ -80,11 +91,10 @@ export default function Projects() {
   }
 
   const lotteryContentObject = {
-    projectName: t('projects.ethoLottery.name'),
-    description: t('projects.ethoLottery.description'),
+    projectName: 'ethoLottery',
     images: {
-      mobile: [ethoLotteryImageMobile],
-      desktop: [ethoLotteryImage]
+      mobile: [ethoLotteryImageMobile, ethoLotteryEnteredMobile],
+      desktop: [ethoLotteryImage, ethoLotteryEnteredImage]
     },
     techStack: {
       frontEnd: ['React', 'React-Hooks', 'web3'],
@@ -94,16 +104,53 @@ export default function Projects() {
     demoUrl: "https://marcin-migdal.github.io/EthoLottery/"
   }
 
+  const toDoListContentObject = {
+    projectName: 'toDoList',
+    images: {
+      mobile: [emptyListImageMobile, toDoListImageMobile, extendedTaskImageMobile, addTaskImageMobile],
+      desktop: [emptyListImage, toDoListImage, extendedTaskImage, addTaskImage]
+    },
+    techStack: {
+      frontEnd: ['React', 'React-Hooks'],
+    },
+    githubUrl: "https://github.com/Marcin-Migdal/to-do-list",
+    demoUrl: "https://marcin-migdal.github.io/to-do-list/"
+  }
+
+  const handleClick = (newProjectObject) => {
+    setProjectObject(newProjectObject);
+    refArray.current[1].scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  const closeProject = () => {
+    setProjectObject(false);
+  }
+
   return (
     <div className={styles.container}>
       <div className="titleContainer">
         <p className="title">{t('navbar.projects')}</p>
       </div>
-      <ProjectComponent projectContentObject={munchtrackContentObject} />
-      <hr className={styles.horizontalHr} />
-      <ProjectComponent projectContentObject={portfolioContentObject} />
-      <hr className={styles.horizontalHr} />
-      <ProjectComponent projectContentObject={lotteryContentObject} />
+
+      {!projectObject ?
+        <div className={styles.projectsBoxContainer}>
+          <ProjectBox
+            backGroundIcon={welcomeImage}
+            handleClick={() => handleClick(munchtrackContentObject)} />
+          <ProjectBox
+            backGroundIcon={portfolioHomeImage}
+            handleClick={() => handleClick(portfolioContentObject)} />
+          <ProjectBox
+            backGroundIcon={ethoLotteryImage}
+            handleClick={() => handleClick(lotteryContentObject)}
+            demoUrl={lotteryContentObject.demoUrl} />
+          <ProjectBox
+            backGroundIcon={toDoListImage}
+            handleClick={() => handleClick(toDoListContentObject)}
+            demoUrl={toDoListContentObject.demoUrl} />
+        </div> :
+        <ProjectComponent projectContentObject={projectObject} closeProject={closeProject} />
+      }
     </div>
   )
 }
