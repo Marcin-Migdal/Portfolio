@@ -1,5 +1,7 @@
-.imageContainer {
+.imageContainer {  
+  margin-top: 1rem;
   position: relative;
+  margin-bottom: 0.75rem;
 }
 
 .demoButton {
@@ -62,11 +64,11 @@
 }
 
 .image {
-  width: 79vw;
+  height: 20vh;
 }
 
-.mobileImage {
-  width: 25vh;
+.mobileImage { 
+  height: 50vh;
 }
 
 .overlay {
@@ -81,6 +83,11 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .imageContainer{
+    margin-top: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+  
   .demoButton {
     background-color: #595959;
     font-size: 1.1rem;
@@ -139,13 +146,15 @@
   }
 
   .image {
-    width: 56vw;
+    height: 57.5vh;
+    max-height: 28.75vw;
     border-radius: 16px 0 16px 0;
-    border-width: 2px;
+    border-width: 1px;
   }
 
   .mobileImage {
-    width: 17vw;
+    height: 70vh;
+    max-height: 35vw;
     border-radius: 16px 0 0 16px;
     border-width: 1px;
   }
@@ -163,20 +172,20 @@
   }
 
   .upperRightHighlight {
-    top: -1.5vw;
-    right: -1.5vw;
+    top: -1.25vw;
+    right: -1.25vw;
     border-width: 3px 3px 0 0;
   }
 
   .lowerLeftHighlight {
-    bottom: -1.5vw;
-    left: -1.5vw;
+    bottom: -1.25vw;
+    left: -1.25vw;
     border-width: 0 0 3px 3px;
   }
 
   .lowerRightHighlight {
-    bottom: -1.5vw;
-    right: -1.5vw;
+    bottom: -1.25vw;
+    right: -1.25vw;
     left: auto;
     border-width: 0 3px 3px 0;
   }

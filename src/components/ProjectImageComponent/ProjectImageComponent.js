@@ -39,7 +39,7 @@ export default function ProjectImageComponent({ projectImageArray, demoUrl, proj
         src={projectImageArray[imageIndex]}
         alt={projectName + "Image"} />
 
-      <div className={styles.overlayBackGround} />
+      {demoUrl && <div className={styles.overlayBackGround} />}
       <div className={styles.overlay} >
         <ArrowImageButton
           condition={imageIndex > 0}

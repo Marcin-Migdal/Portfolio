@@ -1,26 +1,28 @@
-.desktopImageContentContainer,
-.mobileImageContentContainer,
 .projectContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
   position: relative;
 }
 
-.projectContainer {
-  margin: 0;
-}
-
-.switchButtonsContainer {
-  position: relative;
+.buttonsContainer {
   margin-top: 0.5rem;
+  margin-left: 1rem;
 }
 
-.buttonPosition {
-  position: absolute;
-  top: 0;
-  left: -3.75rem;
+.customButton {
+  margin-right: 0.5rem;
+}
+
+.customButton:nth-of-type(1) {
+  width: 3rem;
+  font-weight: 600;
+}
+
+.customButton:nth-of-type(4) {
+  width: 4rem;
+  margin: 0 0 0 0.5rem;
+  font-weight: 600;
 }
 
 .name {
@@ -31,7 +33,7 @@
 
 .switchButton {
   min-width: 4rem;
-  padding: 0.3rem 0;
+  padding: 0.3rem 0.5rem;
   border: solid 2px #ffcdb3;
   outline: none;
   color: #b3b3b3;
@@ -40,18 +42,18 @@
   transition: 0.3s;
 }
 
+.switchButton.active {
+  background-color: #ffd5c0;
+}
+
 .switchButton:nth-of-type(2) {
   border-radius: 10px 0 0 10px;
   border-right-width: 1px;
 }
 
-.switchButton:last-of-type {
+.switchButton:nth-of-type(3) {
   border-radius: 0 10px 10px 0;
   border-left-width: 1px;
-}
-
-.switchButtonActive {
-  background-color: #ffd5c0;
 }
 
 .verticalHr {
@@ -62,8 +64,7 @@
   background-color: #ffffff;
 }
 
-.bottomDescriptionContainer,
-.sideDescriptionContainer {
+.descriptionContainer {
   width: 80%;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
@@ -103,7 +104,7 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: 0.75rem 0 1rem 0;
+  margin: 0 0 0.75rem 0;
 }
 
 .singleTechStackContainer {
@@ -135,33 +136,36 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .mobileImageContentContainer {
-    justify-content: center;
-    flex-direction: row-reverse;
-    margin: 1.75rem 0 4rem 0;
-  }
-
-  .buttonPosition {
-    left: -4.75rem;
-  }
-
   .name {
     font-size: 2.25rem;
   }
 
+  .buttonsContainer {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
+
   .switchButton {
-    min-width: 4.75rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
-  .bottomDescriptionContainer {
+  .customButton {
+    margin-right: 1rem;
+  }
+
+  .customButton:nth-of-type(1) {
+    width: 4rem;
+  }
+
+  .customButton:nth-of-type(4) {
+    width: 5rem;
+    margin: 0 0 0 1rem;
+  }
+
+  .descriptionContainer {
     width: 70%;
-    margin: 2rem 0;
-  }
-
-  .sideDescriptionContainer {
-    width: 40%;
-    margin-right: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .projectDescription {
@@ -178,7 +182,7 @@
 
   .techStackContainer {
     width: 50%;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.25rem 0;
   }
 
   .techStackList {

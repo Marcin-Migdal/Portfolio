@@ -6,22 +6,13 @@ import ProjectImageComponent from '../ProjectImageComponent/ProjectImageComponen
 export default function ProjectComponent({ projectContentObject, closeProject }) {
   const { t } = useTranslation();
   const [mobileImage, setMobileImage] = useState(false);
+  const [isImageVisible, setImageVisible] = useState(true);
 
   const { projectName, images, techStack, githubUrl, demoUrl } = projectContentObject;
   const projectImageArray = mobileImage ? images.mobile : images.desktop;
 
   const setImageType = (imageType) => {
     setMobileImage(imageType)
-  }
-
-  const ToggleButton = ({ condition, handleClick, text }) => {
-    return (
-      <button
-        className={condition ? `${styles.switchButton} ${styles.switchButtonActive}` : styles.switchButton}
-        onClick={handleClick}>
-        {text}
-      </button >
-    )
   }
 
   const TechStackList = ({ title, techStack }) => {
@@ -49,39 +40,63 @@ export default function ProjectComponent({ projectContentObject, closeProject })
     )
   }
 
+  const toggleDescription = () => {
+    setImageVisible(!isImageVisible);
+  }
+
   return (
     <div className={styles.projectContainer}>
       <p className={styles.name}>{t('projects.' + projectName + '.name')}</p>
-      {images.mobile &&
-        <div className={styles.switchButtonsContainer}>
-          <button className={`button ${styles.buttonPosition}`} onClick={closeProject}>{t('projects.backButton')}</button>
-          <ToggleButton condition={!mobileImage} text='Desktop' handleClick={() => setImageType(false)} />
-          <ToggleButton condition={mobileImage} text='Mobile' handleClick={() => setImageType(true)} />
-        </div>
-      }
-      <div className={mobileImage ? styles.mobileImageContentContainer : styles.desktopImageContentContainer}>
+      <div className={styles.buttonsContainer}>
+        <button
+          className={`button ${styles.customButton}`}
+          onClick={closeProject}>
+          {t('projects.backButton')}
+        </button>
+        <button
+          disabled={!isImageVisible === true}
+          className={!mobileImage && isImageVisible === true ? `${styles.switchButton} ${styles.active}` : styles.switchButton}
+          onClick={() => setImageType(false)}>
+          Desktop
+        </button >
+        <button
+          disabled={!isImageVisible === true}
+          className={mobileImage && isImageVisible === true ? `${styles.switchButton} ${styles.active}` : styles.switchButton}
+          onClick={() => setImageType(true)}>
+          Mobile
+        </button >
+        <button
+          className={`button ${styles.customButton}`}
+          onClick={toggleDescription}>
+          {isImageVisible ? 'Obrazy' : 'Opis'}
+        </button>
+      </div>
+
+      {isImageVisible ?
         <ProjectImageComponent
           projectImageArray={projectImageArray}
           demoUrl={demoUrl}
           projectName={projectName}
           mobileImage={mobileImage}
-        />
-        <div className={mobileImage ? styles.sideDescriptionContainer : styles.bottomDescriptionContainer}>
-          <ProjectSectionTitle title={t('projects.titles.description')} />
-          <span className={styles.projectDescription}>
-            {t('projects.' + projectName + '.description')}
-          </span>
-        </div>
-      </div>
+        /> :
+        <>
+          <div className={styles.descriptionContainer}>
+            <ProjectSectionTitle title={t('projects.titles.description')} />
+            <span className={styles.projectDescription}>
+              {t('projects.' + projectName + '.description')}
+            </span>
+          </div>
 
-      <ProjectSectionTitle title={t('projects.titles.technologies')} />
+          <ProjectSectionTitle title={t('projects.titles.technologies')} />
 
-      <div className={techStack.backEnd ? styles.techStackContainer : styles.singleTechStackContainer}>
-        <TechStackList techStack={techStack.frontEnd} title='Front-End' />
-        {techStack.backEnd &&
-          <TechStackList techStack={techStack.backEnd} title='Back-End' />
-        }
-      </div>
+          <div className={techStack.backEnd ? styles.techStackContainer : styles.singleTechStackContainer}>
+            <TechStackList techStack={techStack.frontEnd} title='Front-End' />
+            {techStack.backEnd &&
+              <TechStackList techStack={techStack.backEnd} title='Back-End' />
+            }
+          </div>
+        </>
+      }
       <a className="button" href={githubUrl}>GitHub</a>
     </div>
   )
