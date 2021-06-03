@@ -16,17 +16,15 @@
 
 .customButton:nth-of-type(1) {
   width: 3rem;
-  font-weight: 600;
 }
 
 .customButton:nth-of-type(4) {
-  width: 4rem;
+  width: 4.75rem;
   margin: 0 0 0 0.5rem;
-  font-weight: 600;
 }
 
-.name {
-  font-size: 2rem;
+.projectName {
+  font-size: 1.65rem;
   background-color: #ffe8dc;
   margin: 0 0.5rem;
 }
@@ -88,7 +86,7 @@
 .projectSectionTitle {
   max-width: 11rem;
   text-align: center;
-  font-size: 1.85rem;
+  font-size: 1.65rem;
   margin: 0 0.4rem;
   margin-bottom: 0.5rem;
   background-color: #ffe8dc;
@@ -136,8 +134,8 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .name {
-    font-size: 2.25rem;
+  .projectName {
+    font-size: 1.95rem;
   }
 
   .buttonsContainer {
@@ -158,7 +156,7 @@
   }
 
   .customButton:nth-of-type(4) {
-    width: 5rem;
+    width: 6rem;
     margin: 0 0 0 1rem;
   }
 
@@ -178,6 +176,7 @@
 
   .projectSectionTitle {
     max-width: 100%;
+    font-size: 1.8rem;
   }
 
   .techStackContainer {

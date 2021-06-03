@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './ProjectComponent.module.css'
 import { useTranslation } from 'react-i18next';
-import ProjectImageComponent from '../ProjectImageComponent/ProjectImageComponent';
+import ProjectImage from '../ProjectImage/ProjectImage';
 
 export default function ProjectComponent({ projectContentObject, closeProject }) {
   const { t } = useTranslation();
@@ -46,7 +46,7 @@ export default function ProjectComponent({ projectContentObject, closeProject })
 
   return (
     <div className={styles.projectContainer}>
-      <p className={styles.name}>{t('projects.' + projectName + '.name')}</p>
+      <p className={styles.projectName}>{t('projects.' + projectName + '.name')}</p>
       <div className={styles.buttonsContainer}>
         <button
           className={`button ${styles.customButton}`}
@@ -68,12 +68,12 @@ export default function ProjectComponent({ projectContentObject, closeProject })
         <button
           className={`button ${styles.customButton}`}
           onClick={toggleDescription}>
-          {isImageVisible ? 'Obrazy' : 'Opis'}
+          {isImageVisible ? t('projects.details') : t('projects.imageButton')}
         </button>
       </div>
 
       {isImageVisible ?
-        <ProjectImageComponent
+        <ProjectImage
           projectImageArray={projectImageArray}
           demoUrl={demoUrl}
           projectName={projectName}

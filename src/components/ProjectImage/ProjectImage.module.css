@@ -1,4 +1,4 @@
-.imageContainer {  
+.imageContainer {
   margin-top: 1rem;
   position: relative;
   margin-bottom: 0.75rem;
@@ -20,6 +20,10 @@
 
 .demoButton:active {
   opacity: 1;
+}
+
+.overlayBackGround {
+  display: none;
 }
 
 .imageArrowButton {
@@ -67,7 +71,7 @@
   height: 20vh;
 }
 
-.mobileImage { 
+.mobileImage {
   height: 50vh;
 }
 
@@ -83,11 +87,11 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .imageContainer{
+  .imageContainer {
     margin-top: 1.75rem;
     margin-bottom: 1.25rem;
   }
-  
+
   .demoButton {
     background-color: #595959;
     font-size: 1.1rem;
@@ -114,6 +118,11 @@
     background-color: #bfbfbf;
     opacity: 0;
     transition: 0.4s;
+  }
+
+  .overlayBackGround .mobileImage {
+    height: calc(99% + 1px);
+    border-radius: 16px 0 0 16px;
   }
 
   .imageContainer:hover > .overlayBackGround {
@@ -172,20 +181,20 @@
   }
 
   .upperRightHighlight {
-    top: -1.25vw;
-    right: -1.25vw;
+    top: -15px;
+    right: -15px;
     border-width: 3px 3px 0 0;
   }
 
   .lowerLeftHighlight {
-    bottom: -1.25vw;
-    left: -1.25vw;
+    bottom: -12px;
+    left: -15px;
     border-width: 0 0 3px 3px;
   }
 
   .lowerRightHighlight {
-    bottom: -1.25vw;
-    right: -1.25vw;
+    bottom: -12px;
+    right: -15px;
     left: auto;
     border-width: 0 3px 3px 0;
   }

@@ -33,7 +33,8 @@
       "technologies": "Technologies and libraries"
     },
     "backButton": "Back",
-    "details":"Details"
+    "imageButton": "Images",
+    "details": "Details"
   },
   "technologies": {
     "title": "Skills and technologies",
