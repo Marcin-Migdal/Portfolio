@@ -52,14 +52,15 @@ body {
 .button {
   height: fit-content;
   padding: 0.275rem 0.35rem;
-  border: solid 2px #ffcdb3;
+  outline: none;
+  border: 2px solid#ffcdb3;
   border-radius: 8px;
-  transition: 1s;
-  background-color: inherit;
   color: #bfbfbf;
+  background-color: inherit;
   text-decoration: none;
   text-align: center;
   font-weight: 600;
+  transition: 0.5s;
 }
 
 .button:active {
@@ -110,11 +111,11 @@ body {
     color: #ffffff;
     border: solid 2px #ffffff;
     background-color: #ffd5c0;
-    transition: 0.6s;
+    transition: 0.4s;
   }
 
   .button:active {
     background-color: #ffbb99;
-    transition: 0.3s;
+    transition: 0.2s;
   }
 }

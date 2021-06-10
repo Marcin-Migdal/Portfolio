@@ -5,22 +5,27 @@
   position: relative;
 }
 
-.buttonsContainer {
+.buttonContainer {
+  display: flex;
   margin-top: 0.5rem;
   margin-left: 1rem;
 }
 
-.customButton {
-  margin-right: 0.5rem;
+.switchButtonContainer {
+  display: flex;
+  margin: 0 0.25rem;
 }
 
-.customButton:nth-of-type(1) {
-  width: 3rem;
+.buttonContainer > button {
+  width: 4rem;
 }
 
-.customButton:nth-of-type(4) {
-  width: 4.75rem;
-  margin: 0 0 0 0.5rem;
+.buttonContainer > button:nth-of-type(1) {
+  margin-right: 0.25rem;
+}
+
+.buttonContainer > button:nth-of-type(2) {
+  margin-left: 0.25rem;
 }
 
 .projectName {
@@ -32,24 +37,25 @@
 .switchButton {
   min-width: 4rem;
   padding: 0.3rem 0.5rem;
-  border: solid 2px #ffcdb3;
+  border: 2px solid#ffcdb3;
   outline: none;
-  color: #b3b3b3;
+  color: #bfbfbf;
   text-decoration: none;
   background-color: transparent;
   transition: 0.3s;
 }
 
 .switchButton.active {
+  color: #fff;
   background-color: #ffd5c0;
 }
 
-.switchButton:nth-of-type(2) {
+.switchButton:nth-of-type(1) {
   border-radius: 10px 0 0 10px;
   border-right-width: 1px;
 }
 
-.switchButton:nth-of-type(3) {
+.switchButton:nth-of-type(2) {
   border-radius: 0 10px 10px 0;
   border-left-width: 1px;
 }
@@ -138,26 +144,16 @@
     font-size: 1.95rem;
   }
 
-  .buttonsContainer {
+  .buttonContainer {
     margin-top: 0.5rem;
-    margin-left: 1rem;
   }
 
   .switchButton {
     font-size: 1.1rem;
   }
 
-  .customButton {
-    margin-right: 1rem;
-  }
-
-  .customButton:nth-of-type(1) {
-    width: 4rem;
-  }
-
-  .customButton:nth-of-type(4) {
-    width: 6rem;
-    margin: 0 0 0 1rem;
+  .buttonContainer > button {
+    width: 5rem;
   }
 
   .descriptionContainer {

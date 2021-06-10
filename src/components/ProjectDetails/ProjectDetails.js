@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
-import styles from './ProjectComponent.module.css'
+import styles from './ProjectDetails.module.css'
 import { useTranslation } from 'react-i18next';
 import ProjectImage from '../ProjectImage/ProjectImage';
 
-export default function ProjectComponent({ projectContentObject, closeProject }) {
+export default function ProjectDetails({ projectObject, closeProject }) {
   const { t } = useTranslation();
   const [mobileImage, setMobileImage] = useState(false);
   const [isImageVisible, setImageVisible] = useState(true);
 
-  const { projectName, images, techStack, githubUrl, demoUrl } = projectContentObject;
+  const { projectName, images, techStack, githubUrl, demoUrl } = projectObject;
   const projectImageArray = mobileImage ? images.mobile : images.desktop;
-
-  const setImageType = (imageType) => {
-    setMobileImage(imageType)
-  }
 
   const TechStackList = ({ title, techStack }) => {
     return (
@@ -47,26 +43,36 @@ export default function ProjectComponent({ projectContentObject, closeProject })
   return (
     <div className={styles.projectContainer}>
       <p className={styles.projectName}>{t('projects.' + projectName + '.name')}</p>
-      <div className={styles.buttonsContainer}>
+      <div className={styles.buttonContainer}>
         <button
-          className={`button ${styles.customButton}`}
+          className="button"
           onClick={closeProject}>
           {t('projects.backButton')}
         </button>
+        {images.mobile &&
+          <div className={styles.switchButtonContainer}>
+            <button
+              disabled={!isImageVisible}
+              onClick={() => setMobileImage(false)}
+              className={!mobileImage && isImageVisible ?
+                `${styles.switchButton} ${styles.active}` :
+                styles.switchButton
+              }>
+              Desktop
+            </button >
+            <button
+              disabled={!isImageVisible}
+              onClick={() => setMobileImage(true)}
+              className={mobileImage && isImageVisible ?
+                `${styles.switchButton} ${styles.active}` :
+                styles.switchButton
+              }>
+              Mobile
+            </button >
+          </div>
+        }
         <button
-          disabled={!isImageVisible === true}
-          className={!mobileImage && isImageVisible === true ? `${styles.switchButton} ${styles.active}` : styles.switchButton}
-          onClick={() => setImageType(false)}>
-          Desktop
-        </button >
-        <button
-          disabled={!isImageVisible === true}
-          className={mobileImage && isImageVisible === true ? `${styles.switchButton} ${styles.active}` : styles.switchButton}
-          onClick={() => setImageType(true)}>
-          Mobile
-        </button >
-        <button
-          className={`button ${styles.customButton}`}
+          className="button"
           onClick={toggleDescription}>
           {isImageVisible ? t('projects.details') : t('projects.imageButton')}
         </button>

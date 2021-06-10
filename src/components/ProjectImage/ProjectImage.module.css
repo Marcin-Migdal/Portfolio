@@ -109,6 +109,7 @@
   }
 
   .overlayBackGround {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -126,7 +127,7 @@
   }
 
   .imageContainer:hover > .overlayBackGround {
-    opacity: 0.15;
+    opacity: 0.25;
   }
 
   .overlay:hover > .demoButton {
