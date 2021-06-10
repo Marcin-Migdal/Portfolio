@@ -28,12 +28,22 @@
       "name": "To Do List",
       "description": "To Do List jest stroną internetową na której możesz zapisywać swoje dzienne zadania do wykonania. Zadania są zapisywane w pamięci przeglądarki, dzięki czemu możesz opuszczać strone i do niej wracać kiedy tylko zechcesz, a twoje zadania będą dokładnie tam, gdzie je zostawiłeś."
     },
+    "chatApp": {
+      "name": "Chat App",
+      "description": "Chat App to aplikacja internetowa która po założeniu konta pozawala na tworzenie czatów, zapraszania do nich znajomych oraz wysyłanie między sobą wiadomości."
+    },
+    "reservationApp": {
+      "name": "Rezerwacja Miejsc",
+      "description": "Rezerwacja Miejsc to aplikacja internetowa która daje możliwość zarezerwowania miejsc w np: kinie, teatrze. Wystarczy że aplikacja dostanie z sieci dane w odpowiednim formacie JSON i wygenerowana zostanie sala, w której będzie można rezerwować miesjca."
+    },
     "titles": {
       "description": "Opis",
       "technologies": "Technologie i biblioteki"
     },
+    "workInProgess": "Praca w toku...",
     "backButton": "Wróć",
-    "details": "Szczegóły"
+    "imageButton": "Obrazy",
+    "details": "Opis"
   },
   "technologies": {
     "title": "Umiejętności i Technologie",

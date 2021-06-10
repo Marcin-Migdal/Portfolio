@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import styles from './ProjectImageComponent.module.css'
+import styles from './ProjectImage.module.css'
 import backArrowIcon from '../../resourse/images/backArrow.png'
 
-export default function ProjectImageComponent({ projectImageArray, demoUrl, projectName, mobileImage }) {
+export default function ProjectImage({ projectImageArray, demoUrl, projectName, mobileImage }) {
   const [imageIndex, setImageIndex] = useState(0);
 
   const prevImage = () => {
@@ -39,7 +39,7 @@ export default function ProjectImageComponent({ projectImageArray, demoUrl, proj
         src={projectImageArray[imageIndex]}
         alt={projectName + "Image"} />
 
-      <div className={styles.overlayBackGround} />
+      {demoUrl && <div className={mobileImage ? `${styles.overlayBackGround} ${styles.mobileImage}` : styles.overlayBackGround} />}
       <div className={styles.overlay} >
         <ArrowImageButton
           condition={imageIndex > 0}

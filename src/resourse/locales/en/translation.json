@@ -28,12 +28,22 @@
       "name": "To Do List",
       "description": "To Do List is a website in which you can save your daily tasks. Tasks are saved in browser memory, so you can leave and come back whenever you want, and your tasks will be right there, where you left them."
     },
+    "chatApp": {
+      "name": "Chat App",
+      "description": "Chat App is a web app that after signup allows you to create your own chat, add your friends to this chat and send messages to each other."
+    },
+    "reservationApp": {
+      "name": "Reservation App",
+      "description": "Reservation App is a web app in which you can reserve seat in, for example: cinema, theater. Application only needs to get data from the web in a proper JSON format, and proper hall will be generated, in which you will be able to reserve seats."
+    },
     "titles": {
       "description": "Description",
       "technologies": "Technologies and libraries"
     },
+    "workInProgess": "Work in progess...",
     "backButton": "Back",
-    "details":"Details"
+    "imageButton": "Images",
+    "details": "Details"
   },
   "technologies": {
     "title": "Skills and technologies",

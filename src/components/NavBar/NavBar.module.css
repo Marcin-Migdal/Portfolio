@@ -113,8 +113,9 @@
   .buttonContainer {
     margin-right: 2rem;
   }
-  .lngButton { 
+  .lngButton {
     cursor: pointer;
+    font-weight: 500;
   }
 }
 
